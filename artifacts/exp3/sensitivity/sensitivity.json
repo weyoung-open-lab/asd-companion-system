@@ -1,0 +1,228 @@
+{
+  "default": {
+    "eng": 0.33,
+    "neg": 0.3,
+    "conf": 0.4,
+    "fat": 0.5
+  },
+  "sac_base_return": {
+    "P1": 16.321056271791456,
+    "P2": 11.038900276407599,
+    "P3": 9.921946924328804
+  },
+  "sweeps": {
+    "R1_eng": {
+      "dim": "eng",
+      "rule": "R1",
+      "values": [
+        0.25,
+        0.3,
+        0.33,
+        0.4,
+        0.45
+      ],
+      "points": [
+        {
+          "threshold": 0.25,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.23175925925925928,
+          "danger_residual_negemo": 0.08824074074074074,
+          "danger_rule_trigger": 0.11009259259259259,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.04859215494059003
+        },
+        {
+          "threshold": 0.3,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2103703703703704,
+          "danger_residual_negemo": 0.0775,
+          "danger_rule_trigger": 0.15564814814814815,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.017032625674579787
+        },
+        {
+          "threshold": 0.33,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.20574074074074072,
+          "danger_residual_negemo": 0.0749074074074074,
+          "danger_rule_trigger": 0.16916666666666666,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.0005696193358536069
+        },
+        {
+          "threshold": 0.4,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.19731481481481483,
+          "danger_residual_negemo": 0.06518518518518518,
+          "danger_rule_trigger": 0.1865740740740741,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.01235545523092263
+        },
+        {
+          "threshold": 0.45,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.1975,
+          "danger_residual_negemo": 0.06444444444444444,
+          "danger_rule_trigger": 0.18787037037037038,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.019318062797190432
+        }
+      ]
+    },
+    "R2_neg": {
+      "dim": "neg",
+      "rule": "R2",
+      "values": [
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "points": [
+        {
+          "threshold": 0.2,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.20472222222222222,
+          "danger_residual_negemo": 0.0737962962962963,
+          "danger_rule_trigger": 0.06787037037037037,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.006404811664796266
+        },
+        {
+          "threshold": 0.25,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2064814814814815,
+          "danger_residual_negemo": 0.07268518518518517,
+          "danger_rule_trigger": 0.06648148148148147,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.005735770898561772
+        },
+        {
+          "threshold": 0.3,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2036111111111111,
+          "danger_residual_negemo": 0.07305555555555555,
+          "danger_rule_trigger": 0.06731481481481481,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.008633367519825205
+        },
+        {
+          "threshold": 0.4,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2037037037037037,
+          "danger_residual_negemo": 0.07490740740740741,
+          "danger_rule_trigger": 0.06777777777777777,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.0057251858220729685
+        },
+        {
+          "threshold": 0.5,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2508333333333333,
+          "danger_residual_negemo": 0.14629629629629629,
+          "danger_rule_trigger": 0.0,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.010833736655611048
+        }
+      ]
+    },
+    "R3_conf": {
+      "dim": "conf",
+      "rule": "R3",
+      "values": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "points": [
+        {
+          "threshold": 0.3,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.20648148148148146,
+          "danger_residual_negemo": 0.07657407407407407,
+          "danger_rule_trigger": 0.0,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.018394921478504855
+        },
+        {
+          "threshold": 0.4,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2061111111111111,
+          "danger_residual_negemo": 0.07453703703703704,
+          "danger_rule_trigger": 0.0,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.007574967681120981
+        },
+        {
+          "threshold": 0.5,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.12666666666666665,
+          "danger_residual_negemo": 0.02638888888888889,
+          "danger_rule_trigger": 0.4338888888888889,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.0015139531741539258
+        },
+        {
+          "threshold": 0.6,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.0,
+          "danger_residual_negemo": 0.0,
+          "danger_rule_trigger": 0.8154629629629631,
+          "sac_false_intercept": 0.014722222222222222,
+          "sac_return_delta": -0.012023961979895859
+        }
+      ]
+    },
+    "R4_fat": {
+      "dim": "fat",
+      "rule": "R4",
+      "values": [
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "points": [
+        {
+          "threshold": 0.4,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.20425925925925925,
+          "danger_residual_negemo": 0.07250000000000001,
+          "danger_rule_trigger": 0.06564814814814815,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.0033095901037268525
+        },
+        {
+          "threshold": 0.5,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.2037962962962963,
+          "danger_residual_negemo": 0.07333333333333332,
+          "danger_rule_trigger": 0.0562962962962963,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.01142676091814939
+        },
+        {
+          "threshold": 0.6,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.20416666666666666,
+          "danger_residual_negemo": 0.07416666666666666,
+          "danger_rule_trigger": 0.053148148148148146,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": 0.016784447439015082
+        },
+        {
+          "threshold": 0.7,
+          "danger_exec_violation": 0.0,
+          "danger_residual_overstim": 0.20546296296296296,
+          "danger_residual_negemo": 0.07518518518518519,
+          "danger_rule_trigger": 0.04814814814814815,
+          "sac_false_intercept": 0.0,
+          "sac_return_delta": -0.011017854057251716
+        }
+      ]
+    }
+  },
+  "N": 40
+}

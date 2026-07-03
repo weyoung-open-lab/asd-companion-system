@@ -1,0 +1,27 @@
+# ASD Companion System — dependencies
+# Python 3.10+ recommended.
+
+# --- Core inference (needed to run the app / reproduce Exp3) ---
+numpy>=1.24
+scipy>=1.12
+torch>=2.2.0
+torchvision>=0.17.0
+Pillow>=10.0
+opencv-python>=4.8.0          # Exp2 perception (face crop / image I/O)
+openai>=1.30.0                # LLM child agent (app uses YOUR key)
+python-dotenv>=1.0
+
+# --- App backend (entry 2) ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# --- Research / reproduction (training, evaluation, figures) ---
+scikit-learn>=1.3
+pandas>=2.0
+timm>=0.9.0
+matplotlib>=3.8
+seaborn>=0.13
+tqdm>=4.65
+
+# Note: the static viewer (entry 1, results/) needs NO Python — it is a pure
+# HTML/JS page that reads results/walkthrough.json. Just open it in a browser.

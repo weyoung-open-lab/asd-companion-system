@@ -1,0 +1,66 @@
+{
+  "stop_reason": null,
+  "key_used": "OPENAI_API_KEY_1",
+  "episodes_done": 150,
+  "episodes_needed": 150,
+  "transitions": 4500,
+  "target_transitions": 4500,
+  "new_episodes_this_run": 141,
+  "defaulted_this_run": 0,
+  "cum_defaulted": 0,
+  "cum_defaulted_pct": 0.0,
+  "cum_cost_usd": 45.75,
+  "engagement_jsd_vs_v2": {
+    "P1": {
+      "jsd_ln": 0.0064,
+      "jsd_log2": 0.00924,
+      "v2_baseline_ln": 0.0001,
+      "ok": true
+    },
+    "P2": {
+      "jsd_ln": 0.00969,
+      "jsd_log2": 0.01397,
+      "v2_baseline_ln": 0.01,
+      "ok": true
+    },
+    "P3": {
+      "jsd_ln": 0.00733,
+      "jsd_log2": 0.01058,
+      "v2_baseline_ln": 0.0009,
+      "ok": true
+    }
+  },
+  "emotion_diversity": {
+    "P1": {
+      "distinct": 4,
+      "types": [
+        "anxious",
+        "excited",
+        "happy",
+        "neutral"
+      ]
+    },
+    "P2": {
+      "distinct": 6,
+      "types": [
+        "anxious",
+        "excited",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    "P3": {
+      "distinct": 6,
+      "types": [
+        "anxious",
+        "excited",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    }
+  }
+}

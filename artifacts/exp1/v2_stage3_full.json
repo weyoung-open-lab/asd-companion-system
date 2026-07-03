@@ -1,0 +1,106 @@
+{
+  "P1": {
+    "episodes": 10,
+    "JSD": 0.0,
+    "cosine": 1.0,
+    "W1": 0.0007,
+    "D3": {
+      "early": {
+        "real": 1.963,
+        "sim": 2.0,
+        "err%": 1.9
+      },
+      "mid": {
+        "real": 1.989,
+        "sim": 2.0,
+        "err%": 0.6
+      },
+      "late": {
+        "real": 2.0,
+        "sim": 1.95,
+        "err%": 2.5
+      }
+    },
+    "overall_pass": true,
+    "clamp_intervention": 0.0,
+    "json_fail": 0.0
+  },
+  "P2": {
+    "episodes": 10,
+    "JSD": 0.0098,
+    "cosine": 0.9848,
+    "W1": 0.1273,
+    "D3": {
+      "early": {
+        "real": 1.202,
+        "sim": 1.2,
+        "err%": 0.2
+      },
+      "mid": {
+        "real": 0.946,
+        "sim": 1.01,
+        "err%": 6.8
+      },
+      "late": {
+        "real": 1.019,
+        "sim": 1.09,
+        "err%": 7.0
+      }
+    },
+    "overall_pass": true,
+    "clamp_intervention": 0.0,
+    "json_fail": 0.0,
+    "P2_State2_rate": {
+      "real": {
+        "early": 0.238,
+        "mid": 0.076,
+        "late": 0.119,
+        "overall": 0.15
+      },
+      "sim_final": {
+        "early": 0.3,
+        "mid": 0.2,
+        "late": 0.19
+      },
+      "sim_raw": {
+        "early": 0.3,
+        "mid": 0.2,
+        "late": 0.19
+      },
+      "sim_overall_final": 0.23
+    }
+  },
+  "P3": {
+    "episodes": 10,
+    "JSD": 0.0003,
+    "cosine": 0.9999,
+    "W1": 0.0122,
+    "D3": {
+      "early": {
+        "real": 0.399,
+        "sim": 0.41,
+        "err%": 2.8
+      },
+      "mid": {
+        "real": 0.147,
+        "sim": 0.19,
+        "err%": 29.3
+      },
+      "late": {
+        "real": 0.109,
+        "sim": 0.084,
+        "err%": 22.7
+      }
+    },
+    "overall_pass": true,
+    "clamp_intervention": 0.083,
+    "json_fail": 0.1848,
+    "note": "阶段2复用(max_tokens=220)"
+  },
+  "_meta": {
+    "total_cost_usd": 10.985,
+    "run_cost": 6.984,
+    "calls": 600,
+    "elapsed": 1347.1
+  }
+}

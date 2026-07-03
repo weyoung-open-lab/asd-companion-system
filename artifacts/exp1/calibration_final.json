@@ -1,0 +1,932 @@
+{
+  "metadata": {
+    "dataset": "Engagnition (Nature Scientific Data, 2024)",
+    "n_records": 38,
+    "window_size_sec": 30,
+    "n_temporal_phases": 3,
+    "phase_method": "equal-duration temporal phases (total session time / 3), NOT session-based or task-defined phases",
+    "core_calibration_dimensions": [
+      "1. Transition matrix (30s windows) -> KL divergence < 0.15",
+      "2. State distribution -> Wasserstein distance < 0.20",
+      "3. Temporal dynamics (early/mid/late) -> phase mean error < 20%",
+      "4. Engagement state change frequency -> within 50% of real",
+      "5. Segment duration (coarse persistence descriptor) -> median within 50%"
+    ],
+    "supplementary_analysis": "Task burden association (Layer 3) is for Discussion section only, not a core calibration dimension.",
+    "session_burden_note": "Session elapsed time is an indirect proxy for task burden. Longer sessions may reflect slower execution, attention drift, educator intervention, or individual ability differences - not solely task difficulty.",
+    "transition_matrix_method": "Per-participant windowed counts aggregated then normalized. No cross-participant sequence splicing."
+  },
+  "personas": {
+    "P3_low_engagement": {
+      "participants": [
+        "P27",
+        "P28",
+        "P29",
+        "P30",
+        "P35"
+      ],
+      "conditions": [
+        "LPE"
+      ],
+      "n_records": 5,
+      "mean_engagement": 0.218,
+      "state_change_freq_per_min": 0.018,
+      "engagement_distribution": {
+        "0": 0.8359,
+        "1": 0.1091,
+        "2": 0.055
+      },
+      "transition_matrix_30s": [
+        [
+          0.996,
+          0.004,
+          0.0
+        ],
+        [
+          0.0362,
+          0.9638,
+          0.0
+        ],
+        [
+          0.0,
+          0.0278,
+          0.9722
+        ]
+      ],
+      "temporal_phases": {
+        "early": {
+          "mean_engagement": 0.399,
+          "std_engagement": 0.746,
+          "distribution": {
+            "0": 0.765,
+            "1": 0.0707,
+            "2": 0.1643
+          },
+          "transition_matrix_30s": [
+            [
+              0.9969,
+              0.0031,
+              0.0
+            ],
+            [
+              0.3712,
+              0.6288,
+              0.0
+            ],
+            [
+              0.0,
+              0.0279,
+              0.9721
+            ]
+          ],
+          "state_change_freq_per_min": 0.023
+        },
+        "mid": {
+          "mean_engagement": 0.147,
+          "std_engagement": 0.308,
+          "distribution": {
+            "0": 0.8531,
+            "1": 0.1469,
+            "2": 0.0
+          },
+          "transition_matrix_30s": [
+            [
+              0.9934,
+              0.0066,
+              0.0
+            ],
+            [
+              0.0943,
+              0.9057,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "state_change_freq_per_min": 0.021
+        },
+        "late": {
+          "mean_engagement": 0.109,
+          "std_engagement": 0.214,
+          "distribution": {
+            "0": 0.8908,
+            "1": 0.1092,
+            "2": 0.0
+          },
+          "transition_matrix_30s": [
+            [
+              0.9967,
+              0.0033,
+              0.0
+            ],
+            [
+              0.0695,
+              0.9305,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "state_change_freq_per_min": 0.009
+        }
+      },
+      "temporal_trend": "declining",
+      "temporal_decline": 0.29,
+      "segment_persistence_median_sec": {
+        "0": 6684.5,
+        "1": 363.5,
+        "2": 1030.0
+      },
+      "segment_persistence_mean_sec": {
+        "0": 5956.1,
+        "1": 721.4,
+        "2": 1083.8
+      }
+    },
+    "P2_mid_engagement": {
+      "participants": [
+        "P36",
+        "P37",
+        "P38",
+        "P40",
+        "P41",
+        "P42",
+        "P43",
+        "P44",
+        "P53",
+        "P55"
+      ],
+      "conditions": [
+        "HPE",
+        "LPE"
+      ],
+      "n_records": 10,
+      "mean_engagement": 1.056,
+      "state_change_freq_per_min": 0.017,
+      "engagement_distribution": {
+        "0": 0.0886,
+        "1": 0.7672,
+        "2": 0.1441
+      },
+      "transition_matrix_30s": [
+        [
+          0.9859,
+          0.0141,
+          0.0
+        ],
+        [
+          0.0022,
+          0.9951,
+          0.0027
+        ],
+        [
+          0.0,
+          0.0215,
+          0.9785
+        ]
+      ],
+      "temporal_phases": {
+        "early": {
+          "mean_engagement": 1.202,
+          "std_engagement": 0.462,
+          "distribution": {
+            "0": 0.0361,
+            "1": 0.7259,
+            "2": 0.238
+          },
+          "transition_matrix_30s": [
+            [
+              0.9698,
+              0.0302,
+              0.0
+            ],
+            [
+              0.0027,
+              0.9914,
+              0.0058
+            ],
+            [
+              0.0,
+              0.0316,
+              0.9684
+            ]
+          ],
+          "state_change_freq_per_min": 0.028
+        },
+        "mid": {
+          "mean_engagement": 0.946,
+          "std_engagement": 0.288,
+          "distribution": {
+            "0": 0.1304,
+            "1": 0.7935,
+            "2": 0.076
+          },
+          "transition_matrix_30s": [
+            [
+              0.9824,
+              0.0176,
+              0.0
+            ],
+            [
+              0.0036,
+              0.996,
+              0.0005
+            ],
+            [
+              0.0,
+              0.0165,
+              0.9835
+            ]
+          ],
+          "state_change_freq_per_min": 0.013
+        },
+        "late": {
+          "mean_engagement": 1.019,
+          "std_engagement": 0.224,
+          "distribution": {
+            "0": 0.0994,
+            "1": 0.782,
+            "2": 0.1187
+          },
+          "transition_matrix_30s": [
+            [
+              0.9818,
+              0.0182,
+              0.0
+            ],
+            [
+              0.0025,
+              0.9952,
+              0.0024
+            ],
+            [
+              0.0,
+              0.0093,
+              0.9907
+            ]
+          ],
+          "state_change_freq_per_min": 0.009
+        }
+      },
+      "temporal_trend": "declining",
+      "temporal_decline": 0.183,
+      "segment_persistence_median_sec": {
+        "0": 1362.0,
+        "1": 2395.0,
+        "2": 765.0
+      },
+      "segment_persistence_mean_sec": {
+        "0": 2129.9,
+        "1": 4529.8,
+        "2": 1208.8
+      }
+    },
+    "P1_high_engagement": {
+      "participants": [
+        "P20",
+        "P21",
+        "P22",
+        "P23",
+        "P24",
+        "P25",
+        "P26",
+        "P31",
+        "P32",
+        "P33",
+        "P34",
+        "P39",
+        "P45",
+        "P46",
+        "P47",
+        "P48",
+        "P49",
+        "P50",
+        "P51",
+        "P52",
+        "P54",
+        "P56",
+        "P57"
+      ],
+      "conditions": [
+        "HPE",
+        "LPE"
+      ],
+      "n_records": 23,
+      "mean_engagement": 1.984,
+      "state_change_freq_per_min": 0.004,
+      "engagement_distribution": {
+        "0": 0.0,
+        "1": 0.016,
+        "2": 0.984
+      },
+      "transition_matrix_30s": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9548,
+          0.0452
+        ],
+        [
+          0.0,
+          0.0007,
+          0.9993
+        ]
+      ],
+      "temporal_phases": {
+        "early": {
+          "mean_engagement": 1.963,
+          "std_engagement": 0.058,
+          "distribution": {
+            "0": 0.0,
+            "1": 0.0367,
+            "2": 0.9633
+          },
+          "transition_matrix_30s": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.9551,
+              0.0449
+            ],
+            [
+              0.0,
+              0.0021,
+              0.9979
+            ]
+          ],
+          "state_change_freq_per_min": 0.009
+        },
+        "mid": {
+          "mean_engagement": 1.989,
+          "std_engagement": 0.029,
+          "distribution": {
+            "0": 0.0,
+            "1": 0.0115,
+            "2": 0.9885
+          },
+          "transition_matrix_30s": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.9333,
+              0.0667
+            ],
+            [
+              0.0,
+              0.0006,
+              0.9994
+            ]
+          ],
+          "state_change_freq_per_min": 0.003
+        },
+        "late": {
+          "mean_engagement": 2.0,
+          "std_engagement": 0.0,
+          "distribution": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 1.0
+          },
+          "transition_matrix_30s": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "state_change_freq_per_min": 0.0
+        }
+      },
+      "temporal_trend": "stable",
+      "temporal_decline": -0.037,
+      "segment_persistence_median_sec": {
+        "0": 0,
+        "1": 378.0,
+        "2": 11863.0
+      },
+      "segment_persistence_mean_sec": {
+        "0": 0,
+        "1": 663.3,
+        "2": 11641.7
+      }
+    }
+  },
+  "global": {
+    "n_datapoints": 736791,
+    "engagement_distribution": {
+      "0": 0.156,
+      "1": 0.2982,
+      "2": 0.5458
+    },
+    "transition_matrix_30s": [
+      [
+        0.9932,
+        0.0068,
+        0.0
+      ],
+      [
+        0.0039,
+        0.9925,
+        0.0035
+      ],
+      [
+        0.0,
+        0.003,
+        0.997
+      ]
+    ]
+  },
+  "discussion_only": {
+    "associations": {
+      "burden_vs_engagement": {
+        "description": "Task burden (mean session sec) vs overall engagement",
+        "r": 0.001,
+        "p": 0.9936
+      },
+      "burden_vs_decline": {
+        "description": "Task burden vs engagement decline (early - late)",
+        "r": 0.093,
+        "p": 0.5791
+      },
+      "session_var_vs_eng_var": {
+        "description": "Session duration variability vs engagement variability",
+        "r": 0.038,
+        "p": 0.8194
+      },
+      "duration_trend_vs_decline": {
+        "description": "Session duration trend vs engagement decline",
+        "r": 0.048,
+        "p": 0.7741
+      }
+    },
+    "burden_mapping": {
+      "high_burden": {
+        "n": 13,
+        "mean_eng": 1.475,
+        "std_eng": 0.615,
+        "mean_ses_sec": 28.0
+      },
+      "low_burden": {
+        "n": 13,
+        "mean_eng": 1.73,
+        "std_eng": 0.53,
+        "mean_ses_sec": 5.9
+      },
+      "mid_burden": {
+        "n": 12,
+        "mean_eng": 1.302,
+        "std_eng": 0.794,
+        "mean_ses_sec": 12.2
+      }
+    },
+    "session_burden": {
+      "P20": {
+        "mean_sec": 6.15,
+        "std_sec": 2.87,
+        "max_sec": 16.0,
+        "total_sec": 123.0,
+        "early_5_mean_sec": 7.4,
+        "late_5_mean_sec": 6.0,
+        "slope": -0.129,
+        "slope_p": 0.2712,
+        "n_sessions": 20
+      },
+      "P21": {
+        "mean_sec": 6.9,
+        "std_sec": 2.34,
+        "max_sec": 14.0,
+        "total_sec": 138.0,
+        "early_5_mean_sec": 6.2,
+        "late_5_mean_sec": 7.0,
+        "slope": 0.083,
+        "slope_p": 0.3894,
+        "n_sessions": 20
+      },
+      "P22": {
+        "mean_sec": 10.15,
+        "std_sec": 6.11,
+        "max_sec": 32.0,
+        "total_sec": 203.0,
+        "early_5_mean_sec": 10.2,
+        "late_5_mean_sec": 8.2,
+        "slope": -0.186,
+        "slope_p": 0.4598,
+        "n_sessions": 20
+      },
+      "P23": {
+        "mean_sec": 5.3,
+        "std_sec": 1.19,
+        "max_sec": 8.0,
+        "total_sec": 106.0,
+        "early_5_mean_sec": 5.8,
+        "late_5_mean_sec": 5.0,
+        "slope": -0.053,
+        "slope_p": 0.2768,
+        "n_sessions": 20
+      },
+      "P24": {
+        "mean_sec": 5.95,
+        "std_sec": 3.32,
+        "max_sec": 19.0,
+        "total_sec": 119.0,
+        "early_5_mean_sec": 8.0,
+        "late_5_mean_sec": 4.4,
+        "slope": -0.286,
+        "slope_p": 0.0258,
+        "n_sessions": 20
+      },
+      "P25": {
+        "mean_sec": 6.05,
+        "std_sec": 2.8,
+        "max_sec": 17.0,
+        "total_sec": 121.0,
+        "early_5_mean_sec": 5.2,
+        "late_5_mean_sec": 5.0,
+        "slope": 0.067,
+        "slope_p": 0.5625,
+        "n_sessions": 20
+      },
+      "P26": {
+        "mean_sec": 21.25,
+        "std_sec": 14.18,
+        "max_sec": 53.0,
+        "total_sec": 425.0,
+        "early_5_mean_sec": 22.6,
+        "late_5_mean_sec": 21.4,
+        "slope": 0.001,
+        "slope_p": 0.999,
+        "n_sessions": 20
+      },
+      "P27": {
+        "mean_sec": 11.1,
+        "std_sec": 5.0,
+        "max_sec": 22.0,
+        "total_sec": 222.0,
+        "early_5_mean_sec": 9.0,
+        "late_5_mean_sec": 9.4,
+        "slope": -0.056,
+        "slope_p": 0.7881,
+        "n_sessions": 20
+      },
+      "P28": {
+        "mean_sec": 11.85,
+        "std_sec": 6.83,
+        "max_sec": 30.0,
+        "total_sec": 237.0,
+        "early_5_mean_sec": 20.6,
+        "late_5_mean_sec": 10.2,
+        "slope": -0.595,
+        "slope_p": 0.024,
+        "n_sessions": 20
+      },
+      "P29": {
+        "mean_sec": 12.0,
+        "std_sec": 6.66,
+        "max_sec": 28.0,
+        "total_sec": 240.0,
+        "early_5_mean_sec": 15.2,
+        "late_5_mean_sec": 13.0,
+        "slope": -0.271,
+        "slope_p": 0.3197,
+        "n_sessions": 20
+      },
+      "P30": {
+        "mean_sec": 7.45,
+        "std_sec": 4.6,
+        "max_sec": 25.0,
+        "total_sec": 149.0,
+        "early_5_mean_sec": 10.2,
+        "late_5_mean_sec": 6.0,
+        "slope": -0.277,
+        "slope_p": 0.1328,
+        "n_sessions": 20
+      },
+      "P31": {
+        "mean_sec": 5.35,
+        "std_sec": 1.98,
+        "max_sec": 10.0,
+        "total_sec": 107.0,
+        "early_5_mean_sec": 6.2,
+        "late_5_mean_sec": 6.2,
+        "slope": 0.038,
+        "slope_p": 0.6396,
+        "n_sessions": 20
+      },
+      "P32": {
+        "mean_sec": 5.85,
+        "std_sec": 1.49,
+        "max_sec": 11.0,
+        "total_sec": 117.0,
+        "early_5_mean_sec": 5.0,
+        "late_5_mean_sec": 7.4,
+        "slope": 0.154,
+        "slope_p": 0.0056,
+        "n_sessions": 20
+      },
+      "P33": {
+        "mean_sec": 4.35,
+        "std_sec": 1.56,
+        "max_sec": 9.0,
+        "total_sec": 87.0,
+        "early_5_mean_sec": 4.0,
+        "late_5_mean_sec": 3.8,
+        "slope": -0.016,
+        "slope_p": 0.8067,
+        "n_sessions": 20
+      },
+      "P34": {
+        "mean_sec": 3.8,
+        "std_sec": 0.98,
+        "max_sec": 5.0,
+        "total_sec": 76.0,
+        "early_5_mean_sec": 4.2,
+        "late_5_mean_sec": 3.0,
+        "slope": -0.075,
+        "slope_p": 0.0507,
+        "n_sessions": 20
+      },
+      "P35": {
+        "mean_sec": 17.35,
+        "std_sec": 12.41,
+        "max_sec": 47.0,
+        "total_sec": 347.0,
+        "early_5_mean_sec": 19.4,
+        "late_5_mean_sec": 24.2,
+        "slope": 0.631,
+        "slope_p": 0.2098,
+        "n_sessions": 20
+      },
+      "P36": {
+        "mean_sec": 12.1,
+        "std_sec": 5.57,
+        "max_sec": 30.0,
+        "total_sec": 242.0,
+        "early_5_mean_sec": 15.0,
+        "late_5_mean_sec": 9.4,
+        "slope": -0.379,
+        "slope_p": 0.0869,
+        "n_sessions": 20
+      },
+      "P37": {
+        "mean_sec": 7.05,
+        "std_sec": 1.24,
+        "max_sec": 10.0,
+        "total_sec": 141.0,
+        "early_5_mean_sec": 7.2,
+        "late_5_mean_sec": 7.6,
+        "slope": 0.047,
+        "slope_p": 0.3523,
+        "n_sessions": 20
+      },
+      "P38": {
+        "mean_sec": 4.1,
+        "std_sec": 0.99,
+        "max_sec": 6.0,
+        "total_sec": 82.0,
+        "early_5_mean_sec": 4.6,
+        "late_5_mean_sec": 3.6,
+        "slope": -0.075,
+        "slope_p": 0.0548,
+        "n_sessions": 20
+      },
+      "P39": {
+        "mean_sec": 17.4,
+        "std_sec": 4.53,
+        "max_sec": 33.0,
+        "total_sec": 348.0,
+        "early_5_mean_sec": 17.0,
+        "late_5_mean_sec": 19.0,
+        "slope": 0.134,
+        "slope_p": 0.4729,
+        "n_sessions": 20
+      },
+      "P40": {
+        "mean_sec": 30.2,
+        "std_sec": 12.36,
+        "max_sec": 61.0,
+        "total_sec": 604.0,
+        "early_5_mean_sec": 31.2,
+        "late_5_mean_sec": 33.6,
+        "slope": -0.251,
+        "slope_p": 0.6228,
+        "n_sessions": 20
+      },
+      "P41": {
+        "mean_sec": 16.6,
+        "std_sec": 3.51,
+        "max_sec": 26.0,
+        "total_sec": 332.0,
+        "early_5_mean_sec": 17.0,
+        "late_5_mean_sec": 15.0,
+        "slope": -0.156,
+        "slope_p": 0.2746,
+        "n_sessions": 20
+      },
+      "P42": {
+        "mean_sec": 20.6,
+        "std_sec": 5.27,
+        "max_sec": 32.0,
+        "total_sec": 412.0,
+        "early_5_mean_sec": 17.2,
+        "late_5_mean_sec": 20.2,
+        "slope": 0.209,
+        "slope_p": 0.3318,
+        "n_sessions": 20
+      },
+      "P43": {
+        "mean_sec": 14.15,
+        "std_sec": 3.65,
+        "max_sec": 25.0,
+        "total_sec": 283.0,
+        "early_5_mean_sec": 16.8,
+        "late_5_mean_sec": 13.4,
+        "slope": -0.252,
+        "slope_p": 0.0824,
+        "n_sessions": 20
+      },
+      "P44": {
+        "mean_sec": 27.35,
+        "std_sec": 9.3,
+        "max_sec": 48.0,
+        "total_sec": 547.0,
+        "early_5_mean_sec": 19.4,
+        "late_5_mean_sec": 32.4,
+        "slope": 0.971,
+        "slope_p": 0.005,
+        "n_sessions": 20
+      },
+      "P45": {
+        "mean_sec": 18.7,
+        "std_sec": 7.06,
+        "max_sec": 48.0,
+        "total_sec": 374.0,
+        "early_5_mean_sec": 17.0,
+        "late_5_mean_sec": 22.0,
+        "slope": 0.373,
+        "slope_p": 0.1919,
+        "n_sessions": 20
+      },
+      "P46": {
+        "mean_sec": 13.35,
+        "std_sec": 2.26,
+        "max_sec": 20.0,
+        "total_sec": 267.0,
+        "early_5_mean_sec": 12.0,
+        "late_5_mean_sec": 14.2,
+        "slope": 0.141,
+        "slope_p": 0.1211,
+        "n_sessions": 20
+      },
+      "P47": {
+        "mean_sec": 16.75,
+        "std_sec": 3.59,
+        "max_sec": 24.0,
+        "total_sec": 335.0,
+        "early_5_mean_sec": 16.2,
+        "late_5_mean_sec": 17.2,
+        "slope": 0.105,
+        "slope_p": 0.4793,
+        "n_sessions": 20
+      },
+      "P48": {
+        "mean_sec": 89.59,
+        "std_sec": 50.47,
+        "max_sec": 148.0,
+        "total_sec": 447.95,
+        "early_5_mean_sec": 89.59,
+        "late_5_mean_sec": 89.59,
+        "slope": -21.51,
+        "slope_p": 0.282,
+        "n_sessions": 5
+      },
+      "P49": {
+        "mean_sec": 13.5,
+        "std_sec": 4.13,
+        "max_sec": 26.0,
+        "total_sec": 270.0,
+        "early_5_mean_sec": 16.8,
+        "late_5_mean_sec": 14.4,
+        "slope": -0.108,
+        "slope_p": 0.5246,
+        "n_sessions": 20
+      },
+      "P50": {
+        "mean_sec": 10.75,
+        "std_sec": 1.7,
+        "max_sec": 14.0,
+        "total_sec": 215.0,
+        "early_5_mean_sec": 11.0,
+        "late_5_mean_sec": 11.4,
+        "slope": -0.007,
+        "slope_p": 0.9234,
+        "n_sessions": 20
+      },
+      "P51": {
+        "mean_sec": 8.65,
+        "std_sec": 1.39,
+        "max_sec": 12.0,
+        "total_sec": 173.0,
+        "early_5_mean_sec": 8.2,
+        "late_5_mean_sec": 9.0,
+        "slope": 0.034,
+        "slope_p": 0.5546,
+        "n_sessions": 20
+      },
+      "P52": {
+        "mean_sec": 11.55,
+        "std_sec": 2.77,
+        "max_sec": 20.0,
+        "total_sec": 231.0,
+        "early_5_mean_sec": 10.6,
+        "late_5_mean_sec": 14.0,
+        "slope": 0.216,
+        "slope_p": 0.0465,
+        "n_sessions": 20
+      },
+      "P53": {
+        "mean_sec": 23.75,
+        "std_sec": 8.31,
+        "max_sec": 42.0,
+        "total_sec": 475.0,
+        "early_5_mean_sec": 19.6,
+        "late_5_mean_sec": 24.6,
+        "slope": 0.207,
+        "slope_p": 0.5463,
+        "n_sessions": 20
+      },
+      "P54": {
+        "mean_sec": 9.7,
+        "std_sec": 1.71,
+        "max_sec": 14.0,
+        "total_sec": 194.0,
+        "early_5_mean_sec": 10.2,
+        "late_5_mean_sec": 8.8,
+        "slope": -0.092,
+        "slope_p": 0.1834,
+        "n_sessions": 20
+      },
+      "P55": {
+        "mean_sec": 24.55,
+        "std_sec": 4.58,
+        "max_sec": 35.0,
+        "total_sec": 491.0,
+        "early_5_mean_sec": 24.4,
+        "late_5_mean_sec": 26.2,
+        "slope": 0.094,
+        "slope_p": 0.619,
+        "n_sessions": 20
+      },
+      "P56": {
+        "mean_sec": 16.85,
+        "std_sec": 3.54,
+        "max_sec": 29.0,
+        "total_sec": 337.0,
+        "early_5_mean_sec": 19.6,
+        "late_5_mean_sec": 15.8,
+        "slope": -0.247,
+        "slope_p": 0.0781,
+        "n_sessions": 20
+      },
+      "P57": {
+        "mean_sec": 39.75,
+        "std_sec": 7.66,
+        "max_sec": 62.0,
+        "total_sec": 795.0,
+        "early_5_mean_sec": 40.2,
+        "late_5_mean_sec": 42.8,
+        "slope": 0.019,
+        "slope_p": 0.9528,
+        "n_sessions": 20
+      }
+    },
+    "note": "These results are for the Discussion section only. They are NOT core calibration targets."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "temperature_T": 0.38328224420547485,
+  "ece_before": 0.2905607647569204,
+  "ece_after": 0.033910445799947495,
+  "uncertainty_measure_for_gating": "max_softmax",
+  "best_measure_by_aurc": "margin",
+  "aurc": {
+    "max_softmax": 0.09312347933718843,
+    "neg_entropy": 0.09411007531077695,
+    "margin": 0.09274201315505377
+  },
+  "target_high_conf_accuracy": 0.9,
+  "operating_point": {
+    "threshold": 0.73,
+    "coverage": 0.6571428571428571,
+    "accuracy_on_kept": 0.9011857707509882,
+    "n_kept": 506
+  },
+  "selected_on": "OOF (5-fold out-of-fold of the 770 pool); applied to test155 in Step 3",
+  "seed": 42
+}

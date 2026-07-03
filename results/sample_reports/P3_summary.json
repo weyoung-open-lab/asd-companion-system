@@ -1,0 +1,20 @@
+{
+  "episode": "P3",
+  "persona": "P3",
+  "steps": 30,
+  "perception_accept": 10,
+  "perception_abstain": 20,
+  "safety_interceptions": 1,
+  "R3_triggers": 1,
+  "handback_step": null,
+  "key_moments": {
+    "normal": 1,
+    "abstain_R3": 4,
+    "intercept": 4
+  },
+  "target_band": [
+    0.08,
+    0.35
+  ],
+  "note": "Simulated module-integration demo. Real perception=Exp2 (imperfect). engagement/fatigue simulated. Hand-back=simulated pause, not real handoff."
+}

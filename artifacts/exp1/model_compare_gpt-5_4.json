@@ -1,0 +1,103 @@
+{
+  "model": "gpt-5.4",
+  "key": "OPENAI_API_KEY_1",
+  "max_ep": 30,
+  "stop": null,
+  "config": {
+    "temperature": 0,
+    "token_param": "max_completion_tokens",
+    "response_format": "json_object",
+    "history": "full-30",
+    "prompt": "V2 (no emotion-diversity)"
+  },
+  "per_persona": {
+    "P1": {
+      "episodes": 30,
+      "JSD_ln": 0.0056,
+      "JSD_log2": 0.00808,
+      "cosine": 0.9999,
+      "W1": 0.016,
+      "D3": {
+        "early": {
+          "real": 1.963,
+          "sim": 2.0,
+          "err_pct": 1.9
+        },
+        "mid": {
+          "real": 1.989,
+          "sim": 2.0,
+          "err_pct": 0.6
+        },
+        "late": {
+          "real": 2.0,
+          "sim": 2.0,
+          "err_pct": 0.0
+        }
+      }
+    },
+    "P2": {
+      "episodes": 30,
+      "JSD_ln": 0.0059,
+      "JSD_log2": 0.00851,
+      "cosine": 0.9922,
+      "W1": 0.0973,
+      "D3": {
+        "early": {
+          "real": 1.202,
+          "sim": 1.197,
+          "err_pct": 0.4
+        },
+        "mid": {
+          "real": 0.946,
+          "sim": 0.953,
+          "err_pct": 0.8
+        },
+        "late": {
+          "real": 1.019,
+          "sim": 1.047,
+          "err_pct": 2.7
+        }
+      }
+    },
+    "P3": {
+      "episodes": 30,
+      "JSD_ln": 0.0005,
+      "JSD_log2": 0.00072,
+      "cosine": 0.9998,
+      "W1": 0.0147,
+      "D3": {
+        "early": {
+          "real": 0.399,
+          "sim": 0.427,
+          "err_pct": 6.9
+        },
+        "mid": {
+          "real": 0.147,
+          "sim": 0.197,
+          "err_pct": 33.8
+        },
+        "late": {
+          "real": 0.109,
+          "sim": 0.053,
+          "err_pct": 51.1
+        }
+      }
+    }
+  },
+  "cost": {
+    "list_usd": 31.978,
+    "real_est_usd": 19.187,
+    "per_ep_real": 0.2132,
+    "note": "list=token×单价上限; real≈×0.6(prompt缓存); 以OpenAI看板为准"
+  },
+  "speed": {
+    "n_calls": 2700,
+    "avg_latency_s": 2.15,
+    "total_min": 96.6
+  },
+  "stability": {
+    "json_fail": 0,
+    "json_fail_rate": 0.0,
+    "defaulted": 0
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "P1": {
+    "single_step": {
+      "engagement_mae": 0.017342856153845787,
+      "engagement_rmse": 0.021711532026529312,
+      "confidence_mae": 0.04249976947903633,
+      "fatigue_mae": 0.026196544989943504,
+      "emotion_dist_mse": 0.009334870614111423,
+      "emotion_argmax_acc": 0.77,
+      "self_stim_acc": 1.0,
+      "n_val": 300
+    },
+    "distribution": {
+      "engagement_state_JSD_log2": 0.0005,
+      "engagement_state_cosine": 0.9999,
+      "emotion_JSD_log2": 0.0031,
+      "emotion_cosine": 0.9973,
+      "real_eng_dist": [
+        0.0,
+        0.043,
+        0.957
+      ],
+      "sim_eng_dist": [
+        0.0,
+        0.033,
+        0.967
+      ]
+    },
+    "rollout": {
+      "rollout_eng_mae_mean": 0.028,
+      "rollout_eng_mae_std": 0.0144,
+      "n_rollout_episodes": 10,
+      "sampled_rollouts": 30,
+      "diverged_or_collapsed": 0
+    },
+    "config": {
+      "eng_mode": "cls",
+      "eng_bins": 20
+    },
+    "train_episodes": 40,
+    "val_episodes": 10
+  },
+  "P2": {
+    "single_step": {
+      "engagement_mae": 0.03479998931288719,
+      "engagement_rmse": 0.059032686054706573,
+      "confidence_mae": 0.04326805844902992,
+      "fatigue_mae": 0.011476639658212662,
+      "emotion_dist_mse": 0.009588351473212242,
+      "emotion_argmax_acc": 0.7566666666666667,
+      "self_stim_acc": 0.96,
+      "n_val": 300
+    },
+    "distribution": {
+      "engagement_state_JSD_log2": 0.0006,
+      "engagement_state_cosine": 0.9992,
+      "emotion_JSD_log2": 0.0427,
+      "emotion_cosine": 0.9935,
+      "real_eng_dist": [
+        0.13,
+        0.65,
+        0.22
+      ],
+      "sim_eng_dist": [
+        0.123,
+        0.677,
+        0.2
+      ]
+    },
+    "rollout": {
+      "rollout_eng_mae_mean": 0.0995,
+      "rollout_eng_mae_std": 0.0239,
+      "n_rollout_episodes": 10,
+      "sampled_rollouts": 30,
+      "diverged_or_collapsed": 0
+    },
+    "config": {
+      "eng_mode": "cls",
+      "eng_bins": 20
+    },
+    "train_episodes": 40,
+    "val_episodes": 10
+  },
+  "P3": {
+    "single_step": {
+      "engagement_mae": 0.048406459391117096,
+      "engagement_rmse": 0.08747301250696182,
+      "confidence_mae": 0.03952016308903694,
+      "fatigue_mae": 0.10213638842105865,
+      "emotion_dist_mse": 0.011617413721978664,
+      "emotion_argmax_acc": 0.67,
+      "self_stim_acc": 1.0,
+      "n_val": 300
+    },
+    "distribution": {
+      "engagement_state_JSD_log2": 0.0008,
+      "engagement_state_cosine": 0.9998,
+      "emotion_JSD_log2": 0.0109,
+      "emotion_cosine": 0.9859,
+      "real_eng_dist": [
+        0.907,
+        0.04,
+        0.053
+      ],
+      "sim_eng_dist": [
+        0.887,
+        0.05,
+        0.063
+      ]
+    },
+    "rollout": {
+      "rollout_eng_mae_mean": 0.0623,
+      "rollout_eng_mae_std": 0.0169,
+      "n_rollout_episodes": 10,
+      "sampled_rollouts": 30,
+      "diverged_or_collapsed": 0
+    },
+    "config": {
+      "eng_mode": "cls",
+      "eng_bins": 20
+    },
+    "train_episodes": 40,
+    "val_episodes": 10
+  }
+}

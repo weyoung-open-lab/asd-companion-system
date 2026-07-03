@@ -1,0 +1,142 @@
+{
+  "SA-Full": {
+    "P1": {
+      "eval": {
+        "mean_return": 13.687987465778987,
+        "std_return": 0.02734401351973359,
+        "mean_engagement": 0.8935156127015751,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.0044550598168452
+    },
+    "P2": {
+      "eval": {
+        "mean_return": 14.410894743879636,
+        "std_return": 0.08856608161513146,
+        "mean_engagement": 0.5350043830904695,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.039547014366201186
+    },
+    "P3": {
+      "eval": {
+        "mean_return": 14.228530160240334,
+        "std_return": 0.12473872896109221,
+        "mean_engagement": 0.2457672714259889,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.00788888888888889
+      },
+      "std_return": 0.08862703214986171
+    }
+  },
+  "SA-1 w/o emotion": {
+    "P1": {
+      "eval": {
+        "mean_return": 13.698448178982732,
+        "std_return": 0.027199558136305608,
+        "mean_engagement": 0.8967583193778991,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.0165002511786667
+    },
+    "P2": {
+      "eval": {
+        "mean_return": 14.40253523162206,
+        "std_return": 0.09819671800428444,
+        "mean_engagement": 0.5335780264569654,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.015356218993936336
+    },
+    "P3": {
+      "eval": {
+        "mean_return": 13.984343200790882,
+        "std_return": 0.13527483755877837,
+        "mean_engagement": 0.2553127374682162,
+        "target_band_rate": 0.9997777777777778,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.07537794405774778
+    }
+  },
+  "SA-2 w/o confidence": {
+    "P1": {
+      "eval": {
+        "mean_return": 13.70636873511076,
+        "std_return": 0.03214402086603783,
+        "mean_engagement": 0.8919633405341042,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.014841539343069038
+    },
+    "P2": {
+      "eval": {
+        "mean_return": 14.412195500751338,
+        "std_return": 0.0860505547533109,
+        "mean_engagement": 0.5331834850344392,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.07085963589934988
+    },
+    "P3": {
+      "eval": {
+        "mean_return": 14.26894681520661,
+        "std_return": 0.11915162615887837,
+        "mean_engagement": 0.2445407882233461,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.011111111111111112
+      },
+      "std_return": 0.0315713597208062
+    }
+  },
+  "SA-3 w/o safety": {
+    "P1": {
+      "eval": {
+        "mean_return": 13.687987465778987,
+        "std_return": 0.02734401351973359,
+        "mean_engagement": 0.8935156127015751,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.0044550598168452
+    },
+    "P2": {
+      "eval": {
+        "mean_return": 14.494236672830581,
+        "std_return": 0.10446626656606904,
+        "mean_engagement": 0.530816168649329,
+        "target_band_rate": 1.0,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.02372474841814593
+    },
+    "P3": {
+      "eval": {
+        "mean_return": 14.288915494155882,
+        "std_return": 0.1005114816160572,
+        "mean_engagement": 0.27934970708522533,
+        "target_band_rate": 0.9996666666666667,
+        "overstim_rate": 0.0,
+        "negative_emotion_rate": 0.0
+      },
+      "std_return": 0.02771620424184601
+    }
+  }
+}

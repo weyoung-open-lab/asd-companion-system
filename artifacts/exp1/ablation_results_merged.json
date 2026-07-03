@@ -1,0 +1,514 @@
+{
+  "PA-1_no_state_tracking": {
+    "P1": {
+      "D1_JSD": 0.0039,
+      "D1_pass": true,
+      "D1_cosine": 0.9999,
+      "D2_wasserstein": 0.0149,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0,
+        "1": 0.0011,
+        "2": 0.9989
+      },
+      "real_distribution": {
+        "0": 0.0,
+        "1": 0.016,
+        "2": 0.984
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.963,
+          "sim": 2.0,
+          "rel_error_pct": 1.9,
+          "pass": true
+        },
+        "mid": {
+          "real": 1.989,
+          "sim": 1.997,
+          "rel_error_pct": 0.4,
+          "pass": true
+        },
+        "late": {
+          "real": 2.0,
+          "sim": 2.0,
+          "rel_error_pct": 0.0,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.9
+    },
+    "P2": {
+      "D1_JSD": 0.0574,
+      "D1_pass": true,
+      "D1_cosine": 0.9805,
+      "D2_wasserstein": 0.1927,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0389,
+        "1": 0.96,
+        "2": 0.0011
+      },
+      "real_distribution": {
+        "0": 0.0886,
+        "1": 0.7672,
+        "2": 0.1441
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.202,
+          "sim": 0.99,
+          "rel_error_pct": 17.6,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.946,
+          "sim": 0.97,
+          "rel_error_pct": 2.5,
+          "pass": true
+        },
+        "late": {
+          "real": 1.019,
+          "sim": 0.927,
+          "rel_error_pct": 9.1,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.1434831153543369
+    },
+    "P3": {
+      "D1_JSD": 0.023,
+      "D1_pass": true,
+      "D1_cosine": 0.9947,
+      "D2_wasserstein": 0.0665,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.8244,
+        "1": 0.1756,
+        "2": 0.0
+      },
+      "real_distribution": {
+        "0": 0.8359,
+        "1": 0.1091,
+        "2": 0.055
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 0.399,
+          "sim": 0.487,
+          "rel_error_pct": 22.0,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.147,
+          "sim": 0.04,
+          "rel_error_pct": 72.8,
+          "pass": false
+        },
+        "late": {
+          "real": 0.109,
+          "sim": 0.0,
+          "rel_error_pct": 100.0,
+          "pass": false
+        }
+      },
+      "D3_pass": false,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": false,
+      "cohen_kappa": 0.40318269932586925
+    }
+  },
+  "PA-2_no_rules": {
+    "P1": {
+      "D1_JSD": 0.0056,
+      "D1_pass": true,
+      "D1_cosine": 0.9999,
+      "D2_wasserstein": 0.016,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 1.0
+      },
+      "real_distribution": {
+        "0": 0.0,
+        "1": 0.016,
+        "2": 0.984
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.963,
+          "sim": 2.0,
+          "rel_error_pct": 1.9,
+          "pass": true
+        },
+        "mid": {
+          "real": 1.989,
+          "sim": 2.0,
+          "rel_error_pct": 0.6,
+          "pass": true
+        },
+        "late": {
+          "real": 2.0,
+          "sim": 2.0,
+          "rel_error_pct": 0.0,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 1.0
+    },
+    "P2": {
+      "D1_JSD": 0.0128,
+      "D1_pass": true,
+      "D1_cosine": 0.9945,
+      "D2_wasserstein": 0.0994,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0233,
+        "1": 0.8667,
+        "2": 0.11
+      },
+      "real_distribution": {
+        "0": 0.0886,
+        "1": 0.7672,
+        "2": 0.1441
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.202,
+          "sim": 1.09,
+          "rel_error_pct": 9.3,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.946,
+          "sim": 1.067,
+          "rel_error_pct": 12.8,
+          "pass": true
+        },
+        "late": {
+          "real": 1.019,
+          "sim": 1.103,
+          "rel_error_pct": 8.3,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.009948605514032604
+    },
+    "P3": {
+      "D1_JSD": 0.0248,
+      "D1_pass": true,
+      "D1_cosine": 0.9927,
+      "D2_wasserstein": 0.082,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.8089,
+        "1": 0.1911,
+        "2": 0.0
+      },
+      "real_distribution": {
+        "0": 0.8359,
+        "1": 0.1091,
+        "2": 0.055
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 0.399,
+          "sim": 0.38,
+          "rel_error_pct": 4.8,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.147,
+          "sim": 0.193,
+          "rel_error_pct": 31.5,
+          "pass": false
+        },
+        "late": {
+          "real": 0.109,
+          "sim": 0.0,
+          "rel_error_pct": 100.0,
+          "pass": false
+        }
+      },
+      "D3_pass": false,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": false,
+      "cohen_kappa": 0.750640350877193
+    }
+  },
+  "PA-3_no_data": {
+    "P1": {
+      "D1_JSD": 0.0344,
+      "D1_pass": true,
+      "D1_cosine": 0.987,
+      "D2_wasserstein": 0.1362,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0,
+        "1": 0.1522,
+        "2": 0.8478
+      },
+      "real_distribution": {
+        "0": 0.0,
+        "1": 0.016,
+        "2": 0.984
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.963,
+          "sim": 1.92,
+          "rel_error_pct": 2.2,
+          "pass": true
+        },
+        "mid": {
+          "real": 1.989,
+          "sim": 1.837,
+          "rel_error_pct": 7.7,
+          "pass": true
+        },
+        "late": {
+          "real": 2.0,
+          "sim": 1.787,
+          "rel_error_pct": 10.7,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.06833669045658879
+    },
+    "P2": {
+      "D1_JSD": 0.0043,
+      "D1_pass": true,
+      "D1_cosine": 0.9968,
+      "D2_wasserstein": 0.0755,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.1067,
+        "1": 0.8067,
+        "2": 0.0867
+      },
+      "real_distribution": {
+        "0": 0.0886,
+        "1": 0.7672,
+        "2": 0.1441
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.202,
+          "sim": 0.99,
+          "rel_error_pct": 17.6,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.946,
+          "sim": 1.003,
+          "rel_error_pct": 6.1,
+          "pass": true
+        },
+        "late": {
+          "real": 1.019,
+          "sim": 0.947,
+          "rel_error_pct": 7.1,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.0016694222957800466
+    },
+    "P3": {
+      "D1_JSD": 0.3221,
+      "D1_pass": false,
+      "D1_cosine": 0.2669,
+      "D2_wasserstein": 1.0298,
+      "D2_pass": false,
+      "sim_distribution": {
+        "0": 0.0844,
+        "1": 0.5822,
+        "2": 0.3333
+      },
+      "real_distribution": {
+        "0": 0.8359,
+        "1": 0.1091,
+        "2": 0.055
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 0.399,
+          "sim": 0.87,
+          "rel_error_pct": 118.0,
+          "pass": false
+        },
+        "mid": {
+          "real": 0.147,
+          "sim": 1.32,
+          "rel_error_pct": 798.0,
+          "pass": false
+        },
+        "late": {
+          "real": 0.109,
+          "sim": 1.557,
+          "rel_error_pct": 1328.1,
+          "pass": false
+        }
+      },
+      "D3_pass": false,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": false,
+      "cohen_kappa": 0.18059253235463132
+    }
+  },
+  "PA-4_full": {
+    "P1": {
+      "D1_JSD": 0.0018,
+      "D1_pass": true,
+      "D1_cosine": 0.9999,
+      "D2_wasserstein": 0.0116,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0,
+        "1": 0.0044,
+        "2": 0.9956
+      },
+      "real_distribution": {
+        "0": 0.0,
+        "1": 0.016,
+        "2": 0.984
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.963,
+          "sim": 2.0,
+          "rel_error_pct": 1.9,
+          "pass": true
+        },
+        "mid": {
+          "real": 1.989,
+          "sim": 1.997,
+          "rel_error_pct": 0.4,
+          "pass": true
+        },
+        "late": {
+          "real": 2.0,
+          "sim": 1.99,
+          "rel_error_pct": 0.5,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.7151183893977123
+    },
+    "P2": {
+      "D1_JSD": 0.0447,
+      "D1_pass": true,
+      "D1_cosine": 0.9825,
+      "D2_wasserstein": 0.1761,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.0489,
+        "1": 0.9433,
+        "2": 0.0078
+      },
+      "real_distribution": {
+        "0": 0.0886,
+        "1": 0.7672,
+        "2": 0.1441
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 1.202,
+          "sim": 1.01,
+          "rel_error_pct": 16.0,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.946,
+          "sim": 0.953,
+          "rel_error_pct": 0.8,
+          "pass": true
+        },
+        "late": {
+          "real": 1.019,
+          "sim": 0.913,
+          "rel_error_pct": 10.4,
+          "pass": true
+        }
+      },
+      "D3_pass": true,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": true,
+      "cohen_kappa": 0.11108672497056296
+    },
+    "P3": {
+      "D1_JSD": 0.0085,
+      "D1_pass": true,
+      "D1_cosine": 0.9945,
+      "D2_wasserstein": 0.0753,
+      "D2_pass": true,
+      "sim_distribution": {
+        "0": 0.7922,
+        "1": 0.1844,
+        "2": 0.0233
+      },
+      "real_distribution": {
+        "0": 0.8359,
+        "1": 0.1091,
+        "2": 0.055
+      },
+      "D3_temporal": {
+        "early": {
+          "real": 0.399,
+          "sim": 0.41,
+          "rel_error_pct": 2.8,
+          "pass": true
+        },
+        "mid": {
+          "real": 0.147,
+          "sim": 0.12,
+          "rel_error_pct": 18.4,
+          "pass": true
+        },
+        "late": {
+          "real": 0.109,
+          "sim": 0.163,
+          "rel_error_pct": 49.8,
+          "pass": false
+        }
+      },
+      "D3_pass": false,
+      "D4_pass": true,
+      "D5_pass": true,
+      "overall_pass": false,
+      "cohen_kappa": 0.1401553677614636
+    }
+  }
+}

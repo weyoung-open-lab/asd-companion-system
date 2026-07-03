@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASD Companion System — Live Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>ASD Companion System — Live Demo</h1>
+  <div class="disclaimer">
+    ⚠️ <strong>Simulated demonstration — not a clinical trial.</strong>
+    The child is simulated by an <strong>LLM (your OpenAI key)</strong>; <strong>no real children are involved</strong>.
+    Module-integration demo, <strong>no efficacy claims</strong>. “Hand-back-to-human” is a simulated pause, not a real handoff.
+  </div>
+</header>
+
+<section class="controls">
+  <label>Persona:
+    <select id="personaSelect">
+      <option value="P1">P1 — high engagement</option>
+      <option value="P2">P2 — mid engagement</option>
+      <option value="P3" selected>P3 — low engagement</option>
+    </select>
+  </label>
+  <button id="startBtn">Start session</button>
+  <button id="stepBtn" disabled>Step ⟩</button>
+  <button id="autoBtn" disabled>▶ Auto</button>
+  <span id="status" class="status">backend: checking…</span>
+  <span id="stepLabel" class="status"></span>
+  <span id="momentBadge" class="moment-badge"></span>
+</section>
+<div class="persona-note">ℹ️ Persona is set by a <b>clinician/researcher</b> based on the child's engagement profile — <b>not auto-detected</b> by the system. The system provides an adapted policy per profile; the choice is a human decision.</div>
+
+<main class="grid">
+  <div class="panel">
+    <div class="panel-head">Child agent (LLM) <span class="tag sim">SIMULATED</span></div>
+    <div class="iconbox"><span id="emoIcon" class="bigicon">😐</span><span class="iconlabel">illustrative emotion (not a real face)</span></div>
+    <div class="row"><span>Engagement</span><div class="bar"><div id="engBar" class="fill blue"></div></div><b id="engVal">—</b></div>
+    <div class="row"><span>Displayed emotion</span><b id="dispEmo">—</b></div>
+    <div class="row"><span>Raw emotion (LLM)</span><b id="rawEmo" class="mono">—</b></div>
+    <div class="row"><span>Fatigue</span><div class="bar"><div id="fatBar" class="fill grey"></div></div><b id="fatVal">—</b></div>
+    <div class="interp"><span class="interp-label">State (read from data):</span> <span id="childInterp">—</span></div>
+    <div class="note">Child driven by an LLM using YOUR key. Engagement/fatigue are simulated signals. The state line above is an <b>interpretation of the engagement/emotion values only</b> — not a fabricated specific behaviour.</div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">Perception (Exp2) <span class="tag real">REAL</span></div>
+    <div class="row"><span>Gating tier (3-level)</span><b id="percTier" class="badge">—</b></div>
+    <div class="row"><span>Confidence (calibrated)</span><b id="percConf">—</b></div>
+    <div class="row small"><span>Predicted class</span><b id="percPred" class="mono">—</b></div>
+    <div class="row"><span>Retrieved face</span><b id="percImg" class="mono">—</b></div>
+    <div class="probbars" id="percProbs"></div>
+    <div class="note">Per-class 3-level gate on the calibrated confidence:
+      <b>accept</b> (high — validated ≥0.90 precision) ·
+      <b>cautious</b> (mid — <b>accept but more conservative; R3 soft-cap on standby</b>) ·
+      <b>abstain</b> (low — perception unreliable → R3 forces conservative).
+      Honest: in normal runs soft-cap mostly stays dormant because the trained SAC avoids aggressive actions.</div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">9-D observation</div>
+    <table id="obsTable"></table>
+    <div class="note"><span class="tag real">REAL</span> = Exp2 perception · <span class="tag sim">SIM</span> = simulated.</div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">🤖 Robot decision &amp; safety</div>
+    <div class="iconbox"><span class="bigicon">🤖</span><span class="iconlabel">generic robot (illustrative; vendor-neutral)</span></div>
+    <div class="row"><span>SAC proposes</span><b id="sacAction" class="mono">—</b></div>
+    <div class="row"><span>Safety shield</span><b id="safetyVerdict" class="badge">—</b></div>
+    <div class="row small"><span>R3 level</span><b id="r3level" class="mono">—</b></div>
+    <div class="row"><span>Executed</span><b id="execAction" class="mono">—</b></div>
+    <div class="row small"><span>R3 stand-by (counterfactual)</span><b id="r3cf">—</b></div>
+    <div class="interp"><span class="interp-label">In plain language:</span> <span id="actionInterp">—</span></div>
+    <div class="note">Deterministic R1–R4 shield, always on. The plain-language line is a literal translation of the executed action.</div>
+  </div>
+
+  <div class="panel wide">
+    <div class="panel-head">Interpretability — reward decomposition (deterministic, hand-reproducible)</div>
+    <div class="probbars" id="rewardBars"></div>
+    <div class="note">target-band ★optimal arousal · over-stim / confidence-safety ★safety.</div>
+  </div>
+</main>
+
+<section id="summary" class="summary" style="display:none"></section>
+
+<!-- hand-back modal -->
+<div id="handbackModal" class="modal" style="display:none">
+  <div class="modal-box">
+    <h3>🟣 Hand-back-to-human (SIMULATED)</h3>
+    <p>The system detected <b>persistently unreliable perception + signs of distress</b> and
+       has <b>paused automatic decision-making</b> to surface a decision point.</p>
+    <p class="note">This is a <b>simulated</b> event — no real human takes over. You are role-playing the
+       human expert: apply oversight and let the session continue, or end it.</p>
+    <div class="modal-actions">
+      <button id="hbContinue">Apply human oversight &amp; continue</button>
+      <button id="hbEnd" class="ghost">End session</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  ASD Companion System · MIT · Research/simulation only — not a medical device.
+  Backend: FastAPI (local) · child LLM uses your key.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

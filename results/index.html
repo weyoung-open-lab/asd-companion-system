@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASD Companion System — End-to-End Walkthrough</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>ASD Companion System — End-to-End Walkthrough</h1>
+  <div class="disclaimer">
+    ⚠️ <strong>Simulated demonstration — not a clinical trial.</strong>
+    The child is simulated by an LLM / learned surrogate; <strong>no real children are involved</strong>.
+    This shows <em>module integration</em>, with <strong>no claims of therapeutic efficacy</strong>.
+    “Hand-back-to-human” is a simulated pause, not a real handoff.
+  </div>
+</header>
+
+<section class="controls">
+  <label>Episode:
+    <select id="caseSelect"></select>
+  </label>
+  <button id="playBtn">▶ Play</button>
+  <button id="prevBtn">⟨ Prev</button>
+  <button id="nextBtn">Next ⟩</button>
+  <input type="range" id="stepSlider" min="0" value="0">
+  <span id="stepLabel">step 0</span>
+  <label class="speed">Speed
+    <select id="speedSelect">
+      <option value="1400">slow</option>
+      <option value="800" selected>normal</option>
+      <option value="350">fast</option>
+    </select>
+  </label>
+  <span id="momentBadge" class="moment-badge"></span>
+</section>
+
+<section class="timeline-wrap">
+  <canvas id="timeline" height="90"></canvas>
+  <div class="legend">
+    <span class="lg accept">● accept</span>
+    <span class="lg cautious">● cautious</span>
+    <span class="lg abstain">● abstain</span>
+    <span class="lg intc">✕ safety intercept</span>
+    <span class="lg hb">▮ hand-back trigger</span>
+    <span class="lg band">▬ target band</span>
+  </div>
+</section>
+
+<main class="grid">
+  <!-- Child (simulated) -->
+  <div class="panel">
+    <div class="panel-head">Child agent <span class="tag sim">SIMULATED</span></div>
+    <div class="row"><span>Engagement</span><div class="bar"><div id="engBar" class="fill blue"></div></div><b id="engVal"></b></div>
+    <div class="row"><span>True emotion</span><b id="trueEmo"></b></div>
+    <div class="row"><span>Fatigue</span><div class="bar"><div id="fatBar" class="fill grey"></div></div><b id="fatVal"></b></div>
+    <div class="note">Hidden true state driving the dynamics (LLM/surrogate child).</div>
+  </div>
+
+  <!-- Perception (real Exp2) -->
+  <div class="panel">
+    <div class="panel-head">Perception (Exp2) <span class="tag real">REAL</span></div>
+    <div class="row"><span>Gating tier (3-level)</span><b id="percTier" class="badge"></b></div>
+    <div class="row"><span>Confidence (calibrated)</span><b id="percConf"></b></div>
+    <div class="row small"><span>Predicted class</span><b id="percPred" class="mono"></b></div>
+    <div class="row"><span>Retrieved face</span><b id="percImg" class="mono"></b></div>
+    <div class="probbars" id="percProbs"></div>
+    <div class="note">Per-class 3-level gate on the calibrated confidence:
+      <b>accept</b> (high) · <b>cautious</b> (mid — <b>accept but more conservative; R3 soft-cap on standby</b>) ·
+      <b>abstain</b> (low — R3 forces conservative). EfficientNet-B0 + temperature scaling; imperfect (may misclassify).
+      Honest: soft-cap mostly stays dormant because the trained SAC avoids aggressive actions.</div>
+  </div>
+
+  <!-- 9-D observation -->
+  <div class="panel">
+    <div class="panel-head">9-D observation</div>
+    <table id="obsTable"></table>
+    <div class="note"><span class="tag real">REAL</span> = from Exp2 perception · <span class="tag sim">SIM</span> = simulated.</div>
+  </div>
+
+  <!-- Robot decision + safety -->
+  <div class="panel">
+    <div class="panel-head">Robot decision &amp; safety</div>
+    <div class="row"><span>SAC proposes</span><b id="sacAction" class="mono"></b></div>
+    <div class="row"><span>Safety shield</span><b id="safetyVerdict" class="badge"></b></div>
+    <div class="row small"><span>R3 level</span><b id="r3level" class="mono"></b></div>
+    <div class="row"><span>Executed</span><b id="execAction" class="mono"></b></div>
+    <div class="row small"><span>R3 stand-by (counterfactual)</span><b id="r3cf"></b></div>
+    <div class="note">Deterministic R1–R4 shield, always on. R3 gradient: accept→standby / cautious→soft-cap / abstain→full conservative.</div>
+  </div>
+
+  <!-- Interpretability -->
+  <div class="panel wide">
+    <div class="panel-head">Interpretability — reward decomposition (deterministic, hand-reproducible)</div>
+    <div class="probbars" id="rewardBars"></div>
+    <div class="note">5 terms mapped to clinical intent: target-band ★optimal arousal · over-stim / confidence-safety ★safety.</div>
+  </div>
+</main>
+
+<section id="summary" class="summary"></section>
+
+<footer>
+  ASD Companion System · MIT License · Research/simulation only — not a medical device.
+  Data: <span class="mono">results/walkthrough.json</span> (recorded real run).
+</footer>
+
+<script src="data.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>

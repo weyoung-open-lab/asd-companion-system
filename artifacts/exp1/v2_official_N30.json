@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "total_cost_usd": 32.053,
+    "calls": 2703,
+    "elapsed_sec": 5661.9,
+    "done_personas": [
+      "_meta",
+      "P1",
+      "P2",
+      "P3"
+    ]
+  },
+  "P1": {
+    "persona": "P1",
+    "episodes_full": 30,
+    "episodes_attempted": 30,
+    "steps": 900,
+    "late_steps": 300,
+    "config": {
+      "model": "gpt-4o",
+      "N_EP": 30,
+      "max_tokens": 350,
+      "max_retries": 3,
+      "seed": 42
+    },
+    "JSD": 0.0001,
+    "cosine": 1.0,
+    "W1": 0.0027,
+    "D3": {
+      "early": {
+        "real": 1.963,
+        "sim": 2.0,
+        "err_pct": 1.9,
+        "pass": true
+      },
+      "mid": {
+        "real": 1.989,
+        "sim": 2.0,
+        "err_pct": 0.6,
+        "pass": true
+      },
+      "late": {
+        "real": 2.0,
+        "sim": 1.96,
+        "err_pct": 2.0,
+        "pass": true
+      }
+    },
+    "overall_pass": true,
+    "clamp_intervention": 0.0011,
+    "resample_rate": 0.0011,
+    "safetynet_rate": 0.0011,
+    "json_fail": 0.0011,
+    "aborted": null
+  },
+  "P2": {
+    "persona": "P2",
+    "episodes_full": 30,
+    "episodes_attempted": 30,
+    "steps": 900,
+    "late_steps": 300,
+    "config": {
+      "model": "gpt-4o",
+      "N_EP": 30,
+      "max_tokens": 350,
+      "max_retries": 3,
+      "seed": 43
+    },
+    "JSD": 0.01,
+    "cosine": 0.9843,
+    "W1": 0.1284,
+    "D3": {
+      "early": {
+        "real": 1.202,
+        "sim": 1.207,
+        "err_pct": 0.4,
+        "pass": true
+      },
+      "mid": {
+        "real": 0.946,
+        "sim": 1.01,
+        "err_pct": 6.8,
+        "pass": true
+      },
+      "late": {
+        "real": 1.019,
+        "sim": 1.093,
+        "err_pct": 7.3,
+        "pass": true
+      }
+    },
+    "overall_pass": true,
+    "clamp_intervention": 0.0,
+    "resample_rate": 0.0,
+    "safetynet_rate": 0.0,
+    "json_fail": 0.0,
+    "aborted": null,
+    "P2_State2": {
+      "real": {
+        "early": 0.238,
+        "mid": 0.076,
+        "late": 0.119
+      },
+      "sim_final": {
+        "early": 0.303,
+        "mid": 0.2,
+        "late": 0.193
+      },
+      "sim_raw": {
+        "early": 0.303,
+        "mid": 0.2,
+        "late": 0.193
+      }
+    }
+  },
+  "P3": {
+    "persona": "P3",
+    "episodes_full": 30,
+    "episodes_attempted": 30,
+    "steps": 900,
+    "late_steps": 300,
+    "config": {
+      "model": "gpt-4o",
+      "N_EP": 30,
+      "max_tokens": 350,
+      "max_retries": 3,
+      "seed": 44
+    },
+    "JSD": 0.0009,
+    "cosine": 0.9996,
+    "W1": 0.0224,
+    "D3": {
+      "early": {
+        "real": 0.399,
+        "sim": 0.407,
+        "err_pct": 1.9,
+        "pass": true
+      },
+      "mid": {
+        "real": 0.147,
+        "sim": 0.17,
+        "err_pct": 15.6,
+        "pass": true
+      },
+      "late": {
+        "real": 0.109,
+        "sim": 0.07,
+        "err_pct": 35.8,
+        "pass": false
+      }
+    },
+    "overall_pass": false,
+    "clamp_intervention": 0.0,
+    "resample_rate": 0.0,
+    "safetynet_rate": 0.0,
+    "json_fail": 0.0,
+    "aborted": null
+  }
+}

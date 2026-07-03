@@ -1,0 +1,73 @@
+# --- secrets ---
+.env
+.env.*
+!.env.example
+!app/.env.example
+*.key
+*secret*
+*token*
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- virtual envs ---
+asd_env/
+venv/
+.venv/
+env/
+
+# --- model weights (large, tracked out-of-band by default) ---
+*.pth
+*.pt
+*.dat
+*.onnx
+*.ckpt
+
+# --- EXCEPTIONS: release inference checkpoints kept in git (~17 MB total) ---
+!models/surrogate_P1.pt
+!models/surrogate_P2.pt
+!models/surrogate_P3.pt
+!models/sac_P1.pt
+!models/sac_P2.pt
+!models/sac_P3.pt
+!models/efficientnet_ferac.pt
+
+# --- paper / drafting materials ---
+docs/paper_materials/
+docs/lab_notebook/
+docs/*.docx
+docs/*.ipynb
+artifacts/paper_figures/
+scripts/make_paper_figures.py
+*.tex
+*.bib
+*.bst
+*.cls
+*.sty
+
+# --- archives ---
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# --- large datasets (local only); keep the acquisition note ---
+data/*
+!data/README.md
+
+# --- generated experiment internals; keep public demo assets/checkpoints ---
+artifacts/**/*.jsonl
+artifacts/**/*.discarded*
+artifacts/**/*.npz
+artifacts/**/*.pt
+artifacts/**/*.pth
+artifacts/**/*.pdf
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

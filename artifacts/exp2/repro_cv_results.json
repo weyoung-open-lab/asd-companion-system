@@ -1,0 +1,53 @@
+{
+  "step": "0_reproduction",
+  "faithful_source": "confidence_analysis.py",
+  "seed": 42,
+  "n_folds": 5,
+  "smoke": false,
+  "config": {
+    "backbone": "effb0_affectnet_8cls.pth (strict=False) + Linear(1280,4), freeze first 60% blocks",
+    "loss": "FocalLoss(alpha=class_weights, gamma=2.0, label_smoothing=0.2)",
+    "mixup_alpha": 0.2,
+    "mixup_p": 0.5,
+    "optimizer": "AdamW(lr=1e-4, weight_decay=1e-3)",
+    "scheduler": "warmup5 + cosine",
+    "epochs": 80,
+    "patience": 15,
+    "batch_size": 16,
+    "sampler": "WeightedRandomSampler",
+    "img": "train RandomCrop224<-Resize256; val Resize224; ImageNet norm",
+    "cudnn_deterministic": true
+  },
+  "per_fold_macro_f1": [
+    0.593128216898628,
+    0.5998530091553347,
+    0.6998992857082259,
+    0.7447603335379578,
+    0.6812226775956285
+  ],
+  "per_fold_accuracy": [
+    0.7207792207792207,
+    0.7402597402597403,
+    0.8181818181818182,
+    0.8441558441558441,
+    0.8246753246753247
+  ],
+  "mean_macro_f1": 0.663772704579155,
+  "std_macro_f1": 0.05872818500420013,
+  "mean_accuracy": 0.7896103896103897,
+  "std_accuracy": 0.04938481387488713,
+  "target_repro": "0.707 ± 0.051 (band 0.65-0.76)",
+  "classes": [
+    "Natural",
+    "anger",
+    "fear",
+    "joy"
+  ],
+  "pooled_total": 770,
+  "per_class_count": {
+    "Natural": 184,
+    "anger": 74,
+    "fear": 49,
+    "joy": 463
+  }
+}

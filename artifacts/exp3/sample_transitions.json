@@ -1,0 +1,283 @@
+{
+  "key_used": "OPENAI_API_KEY_2",
+  "persona": "P3",
+  "temperature": 0.3,
+  "n": 5,
+  "state_dim_definition": [
+    "0:engagement",
+    "1:delta_engagement",
+    "2:p_Natural",
+    "3:p_Anger",
+    "4:p_Fear",
+    "5:p_Joy",
+    "6:confidence",
+    "7:fatigue",
+    "8:tau=step/30"
+  ],
+  "validation": {
+    "no_missing_no_null": true,
+    "state_9dim": true,
+    "action_int_0_53": true,
+    "reward_finite": true,
+    "no_nan_in_state": true,
+    "continuity_next==next_state": true,
+    "done_only_at_30": true
+  },
+  "transitions": [
+    {
+      "persona": "P3",
+      "episode_id": "P3_ep000",
+      "step": 1,
+      "state": [
+        0.15,
+        0.0,
+        0.5,
+        0.1667,
+        0.1667,
+        0.1667,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "action": 40,
+      "action_dict": {
+        "speech_rate": "fast",
+        "stimulus": "low",
+        "topic": "switch",
+        "encouragement": "moderate"
+      },
+      "next_state": [
+        0.1,
+        -0.05,
+        0.1977,
+        0.1977,
+        0.4068,
+        0.1977,
+        0.4068,
+        0.0,
+        0.0333
+      ],
+      "reward": -0.2793,
+      "done": false,
+      "reward_components": {
+        "d_engagement": -0.1,
+        "target_band": 0.3,
+        "emotion_valence": -0.12,
+        "over_stim": -0.3,
+        "confidence_safety": -0.0593
+      },
+      "_aux": {
+        "engagement": 0.1,
+        "emotion_raw": "anxious",
+        "emotion_4cls": "Fear",
+        "confidence": 0.4068,
+        "fatigue": 0.0,
+        "self_stim": false
+      }
+    },
+    {
+      "persona": "P3",
+      "episode_id": "P3_ep000",
+      "step": 2,
+      "state": [
+        0.1,
+        -0.05,
+        0.1977,
+        0.1977,
+        0.4068,
+        0.1977,
+        0.4068,
+        0.0,
+        0.0333
+      ],
+      "action": 47,
+      "action_dict": {
+        "speech_rate": "fast",
+        "stimulus": "medium",
+        "topic": "switch",
+        "encouragement": "frequent"
+      },
+      "next_state": [
+        0.08,
+        -0.02,
+        0.191,
+        0.427,
+        0.191,
+        0.191,
+        0.427,
+        0.0,
+        0.0667
+      ],
+      "reward": -0.1723,
+      "done": false,
+      "reward_components": {
+        "d_engagement": -0.04,
+        "target_band": 0.3,
+        "emotion_valence": -0.075,
+        "over_stim": -0.3,
+        "confidence_safety": -0.0573
+      },
+      "_aux": {
+        "engagement": 0.08,
+        "emotion_raw": "frustrated",
+        "emotion_4cls": "Anger",
+        "confidence": 0.427,
+        "fatigue": 0.0,
+        "self_stim": false
+      }
+    },
+    {
+      "persona": "P3",
+      "episode_id": "P3_ep000",
+      "step": 3,
+      "state": [
+        0.08,
+        -0.02,
+        0.191,
+        0.427,
+        0.191,
+        0.191,
+        0.427,
+        0.0,
+        0.0667
+      ],
+      "action": 14,
+      "action_dict": {
+        "speech_rate": "slow",
+        "stimulus": "high",
+        "topic": "maintain",
+        "encouragement": "frequent"
+      },
+      "next_state": [
+        0.68,
+        0.6,
+        0.1756,
+        0.1756,
+        0.1756,
+        0.4733,
+        0.4733,
+        0.0,
+        0.1
+      ],
+      "reward": 0.5673,
+      "done": false,
+      "reward_components": {
+        "d_engagement": 1.2,
+        "target_band": -0.33,
+        "emotion_valence": 0.15,
+        "over_stim": -0.4,
+        "confidence_safety": -0.0527
+      },
+      "_aux": {
+        "engagement": 0.68,
+        "emotion_raw": "excited",
+        "emotion_4cls": "Joy",
+        "confidence": 0.4733,
+        "fatigue": 0.0,
+        "self_stim": false
+      }
+    },
+    {
+      "persona": "P3",
+      "episode_id": "P3_ep000",
+      "step": 4,
+      "state": [
+        0.68,
+        0.6,
+        0.1756,
+        0.1756,
+        0.1756,
+        0.4733,
+        0.4733,
+        0.0,
+        0.1
+      ],
+      "action": 6,
+      "action_dict": {
+        "speech_rate": "slow",
+        "stimulus": "medium",
+        "topic": "maintain",
+        "encouragement": "none"
+      },
+      "next_state": [
+        0.5,
+        -0.18,
+        0.1469,
+        0.1469,
+        0.1469,
+        0.5593,
+        0.5593,
+        0.0,
+        0.1333
+      ],
+      "reward": -0.4041,
+      "done": false,
+      "reward_components": {
+        "d_engagement": -0.36,
+        "target_band": -0.15,
+        "emotion_valence": 0.15,
+        "over_stim": 0.0,
+        "confidence_safety": -0.0441
+      },
+      "_aux": {
+        "engagement": 0.5,
+        "emotion_raw": "happy",
+        "emotion_4cls": "Joy",
+        "confidence": 0.5593,
+        "fatigue": 0.0,
+        "self_stim": false
+      }
+    },
+    {
+      "persona": "P3",
+      "episode_id": "P3_ep000",
+      "step": 5,
+      "state": [
+        0.5,
+        -0.18,
+        0.1469,
+        0.1469,
+        0.1469,
+        0.5593,
+        0.5593,
+        0.0,
+        0.1333
+      ],
+      "action": 34,
+      "action_dict": {
+        "speech_rate": "normal",
+        "stimulus": "high",
+        "topic": "switch",
+        "encouragement": "moderate"
+      },
+      "next_state": [
+        0.1,
+        -0.4,
+        0.4169,
+        0.1944,
+        0.1944,
+        0.1944,
+        0.4169,
+        0.0,
+        0.1667
+      ],
+      "reward": -0.9283,
+      "done": false,
+      "reward_components": {
+        "d_engagement": -0.8,
+        "target_band": 0.3,
+        "emotion_valence": 0.03,
+        "over_stim": -0.4,
+        "confidence_safety": -0.0583
+      },
+      "_aux": {
+        "engagement": 0.1,
+        "emotion_raw": "neutral",
+        "emotion_4cls": "Natural",
+        "confidence": 0.4169,
+        "fatigue": 0.0,
+        "self_stim": false
+      }
+    }
+  ]
+}

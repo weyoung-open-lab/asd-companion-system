@@ -1,0 +1,286 @@
+{
+  "results": {
+    "P1": {
+      "random": {
+        "eval": {
+          "mean_return": 9.363938963321845,
+          "std_return": 0.9032588129474793,
+          "mean_engagement": 0.7893374486896727,
+          "target_band_rate": 0.9563333333333334,
+          "overstim_rate": 0.10788888888888888,
+          "negative_emotion_rate": 0.051333333333333335
+        },
+        "eval_return_std": 0.04573335327629483,
+        "convergence_ep": null,
+        "trains": false
+      },
+      "rule": {
+        "eval": {
+          "mean_return": 10.847545936459303,
+          "std_return": 0.3198792122108301,
+          "mean_engagement": 0.8356207821104261,
+          "target_band_rate": 0.997,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.008667227684809526,
+        "convergence_ep": null,
+        "trains": false
+      },
+      "dqn": {
+        "eval": {
+          "mean_return": 13.483144831746815,
+          "std_return": 0.5950480546090943,
+          "mean_engagement": 0.8211596708960003,
+          "target_band_rate": 0.9708888888888888,
+          "overstim_rate": 0.005333333333333333,
+          "negative_emotion_rate": 0.10188888888888888
+        },
+        "eval_return_std": 3.553552723676334,
+        "convergence_ep": 35.0,
+        "trains": true
+      },
+      "ppo": {
+        "eval": {
+          "mean_return": 16.30657820922136,
+          "std_return": 0.09339031281656583,
+          "mean_engagement": 0.8601707819766468,
+          "target_band_rate": 1.0,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.010919378399385275,
+        "convergence_ep": 200.66666666666666,
+        "trains": true
+      },
+      "sac": {
+        "eval": {
+          "mean_return": 16.33687430560589,
+          "std_return": 0.07638525494824745,
+          "mean_engagement": 0.8616485598153538,
+          "target_band_rate": 1.0,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.002498621195568818,
+        "convergence_ep": 239.66666666666666,
+        "trains": true
+      }
+    },
+    "P2": {
+      "random": {
+        "eval": {
+          "mean_return": 5.668099509382247,
+          "std_return": 0.7354213200088737,
+          "mean_engagement": 0.5278930041657554,
+          "target_band_rate": 0.6681111111111111,
+          "overstim_rate": 0.10788888888888888,
+          "negative_emotion_rate": 0.007
+        },
+        "eval_return_std": 0.007354735921643158,
+        "convergence_ep": null,
+        "trains": false
+      },
+      "rule": {
+        "eval": {
+          "mean_return": 6.7055987295806405,
+          "std_return": 0.4745549771408548,
+          "mean_engagement": 0.5326263374918037,
+          "target_band_rate": 0.7005555555555555,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.04385209299834104,
+        "convergence_ep": null,
+        "trains": false
+      },
+      "dqn": {
+        "eval": {
+          "mean_return": 8.779807178080082,
+          "std_return": 0.5088719588201575,
+          "mean_engagement": 0.5376096708940136,
+          "target_band_rate": 0.7026666666666667,
+          "overstim_rate": 0.005333333333333333,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.5939167274660573,
+        "convergence_ep": 72.0,
+        "trains": true
+      },
+      "ppo": {
+        "eval": {
+          "mean_return": 10.857868753886223,
+          "std_return": 0.49356932652577057,
+          "mean_engagement": 0.5381596710582573,
+          "target_band_rate": 0.6855555555555556,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0001111111111111111
+        },
+        "eval_return_std": 0.13795345425724617,
+        "convergence_ep": 205.0,
+        "trains": true
+      },
+      "sac": {
+        "eval": {
+          "mean_return": 11.030006903002658,
+          "std_return": 0.4467801538617526,
+          "mean_engagement": 0.5422596709794468,
+          "target_band_rate": 0.6972222222222223,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.055385100934430845,
+        "convergence_ep": 332.0,
+        "trains": true
+      }
+    },
+    "P3": {
+      "random": {
+        "eval": {
+          "mean_return": -2.7211317613688615,
+          "std_return": 1.6976758441511908,
+          "mean_engagement": 0.20130411532810996,
+          "target_band_rate": 0.7346666666666666,
+          "overstim_rate": 0.10788888888888888,
+          "negative_emotion_rate": 0.2998888888888889
+        },
+        "eval_return_std": 0.05782842157531804,
+        "convergence_ep": null,
+        "trains": false
+      },
+      "rule": {
+        "eval": {
+          "mean_return": 8.33754254360348,
+          "std_return": 0.7390345564723173,
+          "mean_engagement": 0.22588744864116114,
+          "target_band_rate": 0.6876666666666665,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.0415107954194063,
+        "convergence_ep": null,
+        "trains": false
+      },
+      "dqn": {
+        "eval": {
+          "mean_return": 9.13535988698676,
+          "std_return": 0.9977563833010121,
+          "mean_engagement": 0.2023818931153251,
+          "target_band_rate": 0.7513333333333333,
+          "overstim_rate": 0.005333333333333333,
+          "negative_emotion_rate": 0.01633333333333333
+        },
+        "eval_return_std": 0.32534338693202464,
+        "convergence_ep": 40.666666666666664,
+        "trains": true
+      },
+      "ppo": {
+        "eval": {
+          "mean_return": 9.563335376485435,
+          "std_return": 0.6907778479488941,
+          "mean_engagement": 0.21100967085734013,
+          "target_band_rate": 0.708888888888889,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.16588647533080236,
+        "convergence_ep": 166.33333333333334,
+        "trains": true
+      },
+      "sac": {
+        "eval": {
+          "mean_return": 10.086478051317483,
+          "std_return": 0.6506444460582893,
+          "mean_engagement": 0.201309670895752,
+          "target_band_rate": 0.7544444444444444,
+          "overstim_rate": 0.0,
+          "negative_emotion_rate": 0.0
+        },
+        "eval_return_std": 0.09203110428349086,
+        "convergence_ep": 300.0,
+        "trains": true
+      }
+    }
+  },
+  "wilcoxon_sac_vs": {
+    "P1": {
+      "random": {
+        "p_value": 3.8965598450959084e-18,
+        "sig": "***"
+      },
+      "rule": {
+        "p_value": 3.8965598450959084e-18,
+        "sig": "***"
+      },
+      "dqn": {
+        "p_value": 3.8965598450959084e-18,
+        "sig": "***"
+      },
+      "ppo": {
+        "p_value": 3.3406275973304598e-09,
+        "sig": "***"
+      }
+    },
+    "P2": {
+      "random": {
+        "p_value": 3.8965598450959084e-18,
+        "sig": "***"
+      },
+      "rule": {
+        "p_value": 3.8965598450959084e-18,
+        "sig": "***"
+      },
+      "dqn": {
+        "p_value": 1.082004916926409e-17,
+        "sig": "***"
+      },
+      "ppo": {
+        "p_value": 1.484253910357382e-11,
+        "sig": "***"
+      }
+    },
+    "P3": {
+      "random": {
+        "p_value": 3.8965598450959084e-18,
+        "sig": "***"
+      },
+      "rule": {
+        "p_value": 4.0161556854627e-18,
+        "sig": "***"
+      },
+      "dqn": {
+        "p_value": 3.861843481183515e-17,
+        "sig": "***"
+      },
+      "ppo": {
+        "p_value": 2.323425662107666e-11,
+        "sig": "***"
+      }
+    }
+  },
+  "danger_triggering_agents": {
+    "random": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "dqn": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "ppo": [
+      "P2"
+    ]
+  },
+  "config": {
+    "n_episodes": 500,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "surrogate": "cls",
+    "reward": "deterministic 5-term"
+  }
+}

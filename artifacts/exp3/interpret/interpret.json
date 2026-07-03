@@ -1,0 +1,252 @@
+{
+  "partA_proportion": {
+    "P1": {
+      "d_engagement": 0.08896982238480275,
+      "target_band": 0.5033417358729202,
+      "emotion_valence": 0.2516708679364601,
+      "over_stim": 0.0,
+      "confidence_safety": 0.15601757380581688
+    },
+    "P2": {
+      "d_engagement": 0.41052330471751397,
+      "target_band": 0.33193628275771897,
+      "emotion_valence": 0.10924571947539888,
+      "over_stim": 0.0,
+      "confidence_safety": 0.14829469304936813
+    },
+    "P3": {
+      "d_engagement": 0.3225321984499583,
+      "target_band": 0.4248858348567418,
+      "emotion_valence": 0.08314630552035761,
+      "over_stim": 0.0,
+      "confidence_safety": 0.16943566117294223
+    }
+  },
+  "partA_mean_contribution": {
+    "P1": {
+      "d_engagement": 0.001374607284863787,
+      "target_band": 0.3,
+      "emotion_valence": 0.15,
+      "over_stim": 0.0,
+      "confidence_safety": 0.09298905456463498
+    },
+    "P2": {
+      "d_engagement": 4.127365350723148e-05,
+      "target_band": 0.19426948043803371,
+      "emotion_valence": 0.07416,
+      "over_stim": 0.0,
+      "confidence_safety": 0.10066787503759068
+    },
+    "P3": {
+      "d_engagement": -0.013758726231753829,
+      "target_band": 0.2082359871714065,
+      "emotion_valence": 0.048720000000000006,
+      "over_stim": 0.0,
+      "confidence_safety": 0.09384178931613765
+    }
+  },
+  "partA_representative_return": {
+    "P1": 16.329614603519442,
+    "P2": 11.07835202872753,
+    "P3": 10.108885405361654
+  },
+  "partB_counterfactual": [
+    {
+      "name": "置信度↓ (0.90→0.20)",
+      "persona": "P2",
+      "perturb": "confidence 0.90→0.20",
+      "key_term": "confidence_safety",
+      "base_state": {
+        "eng": 0.5,
+        "emo_4cls": "Natural",
+        "conf": 0.9,
+        "fatigue": 0.0
+      },
+      "pert_state": {
+        "eng": 0.5,
+        "emo_4cls": "Natural",
+        "conf": 0.2,
+        "fatigue": 0.0
+      },
+      "key_term_base_agg": -0.01,
+      "key_term_pert_agg": -0.08,
+      "key_term_base_con": 0.02,
+      "key_term_pert_con": 0.16,
+      "reward_pert_agg": -0.055,
+      "reward_pert_con": 0.385,
+      "shield_aggr_base": "allow",
+      "shield_aggr_pert": "intercept[R3]",
+      "sac_argmax": "slow/low/maintain/frequent",
+      "clinical": "低置信→confidence_safety 项使保守动作奖励↑、激进↓(谨慎原则)；安全层 R3 进一步确定性强制保守"
+    },
+    {
+      "name": "感知弃权 (abstain)",
+      "persona": "P2",
+      "perturb": "perception abstain=True",
+      "key_term": null,
+      "base_state": {
+        "eng": 0.5,
+        "emo_4cls": "Natural",
+        "conf": 0.9,
+        "fatigue": 0.0
+      },
+      "pert_state": {
+        "eng": 0.5,
+        "emo_4cls": "Natural",
+        "conf": 0.9,
+        "fatigue": 0.0
+      },
+      "key_term_base_agg": null,
+      "key_term_pert_agg": null,
+      "key_term_base_con": null,
+      "key_term_pert_con": null,
+      "reward_pert_agg": 0.12,
+      "reward_pert_con": 0.35,
+      "shield_aggr_base": "allow",
+      "shield_aggr_pert": "intercept[R3]",
+      "sac_argmax": "slow/low/maintain/moderate",
+      "clinical": "感知弃权(不可靠信号)→安全层 R3 确定性强制保守(reward 看不到 abstain，故由硬规则兜底)"
+    },
+    {
+      "name": "参与度↓ (0.50→0.15)",
+      "persona": "P3",
+      "perturb": "engagement 0.50→0.15",
+      "key_term": "over_stim",
+      "base_state": {
+        "eng": 0.5,
+        "emo_4cls": "Natural",
+        "conf": 0.7,
+        "fatigue": 0.0
+      },
+      "pert_state": {
+        "eng": 0.15,
+        "emo_4cls": "Natural",
+        "conf": 0.7,
+        "fatigue": 0.0
+      },
+      "key_term_base_agg": -0.7,
+      "key_term_pert_agg": -0.7,
+      "key_term_base_con": 0.0,
+      "key_term_pert_con": 0.0,
+      "reward_pert_agg": -0.4,
+      "reward_pert_con": 0.39,
+      "shield_aggr_base": "allow",
+      "shield_aggr_pert": "intercept[R1]",
+      "sac_argmax": "slow/low/maintain/frequent",
+      "clinical": "低参与+高刺激→over_stim 惩罚(P3 对 fast/high 重罚)；安全层 R1 确定性拦截(最优唤醒：不把低参与儿童推向过度唤醒)"
+    },
+    {
+      "name": "注入恐惧 (Natural→Fear)",
+      "persona": "P2",
+      "perturb": "emotion Natural→Fear",
+      "key_term": "emotion_valence",
+      "base_state": {
+        "eng": 0.5,
+        "emo_4cls": "Natural",
+        "conf": 0.7,
+        "fatigue": 0.0
+      },
+      "pert_state": {
+        "eng": 0.5,
+        "emo_4cls": "Fear",
+        "conf": 0.7,
+        "fatigue": 0.0
+      },
+      "key_term_base_agg": 0.03,
+      "key_term_pert_agg": -0.12,
+      "key_term_base_con": 0.03,
+      "key_term_pert_con": -0.12,
+      "reward_pert_agg": -0.05,
+      "reward_pert_con": 0.39,
+      "shield_aggr_base": "allow",
+      "shield_aggr_pert": "intercept[R2]",
+      "sac_argmax": "slow/low/maintain/moderate",
+      "clinical": "负面情绪→emotion_valence 惩罚负面效价；安全层 R2 拦截升刺激(SOR-焦虑：强刺激与焦虑互相加剧)"
+    },
+    {
+      "name": "疲劳↑ (0.0→0.70)",
+      "persona": "P1",
+      "perturb": "fatigue 0.0→0.70",
+      "key_term": null,
+      "base_state": {
+        "eng": 0.8,
+        "emo_4cls": "Joy",
+        "conf": 0.8,
+        "fatigue": 0.0
+      },
+      "pert_state": {
+        "eng": 0.8,
+        "emo_4cls": "Joy",
+        "conf": 0.8,
+        "fatigue": 0.7
+      },
+      "key_term_base_agg": null,
+      "key_term_pert_agg": null,
+      "key_term_base_con": null,
+      "key_term_pert_con": null,
+      "reward_pert_agg": 0.43,
+      "reward_pert_con": 0.49,
+      "shield_aggr_base": "allow",
+      "shield_aggr_pert": "intercept[R4]",
+      "sac_argmax": "slow/low/maintain/moderate",
+      "clinical": "高疲劳→安全层 R4 拦截高强度(感觉餐：疲劳下持续高强度适得其反；reward 不含 fatigue 项，由硬规则兜底)"
+    }
+  ],
+  "partC_safety_attribution": [
+    {
+      "scenario": "低参与态",
+      "persona": "P3",
+      "proposed_action": "fast/high/switch/frequent",
+      "triggered_rules": [
+        "R1"
+      ],
+      "trigger_dim": "engagement=0.15<0.33",
+      "replaced_with": "slow/low/maintain/moderate",
+      "intercepted": true
+    },
+    {
+      "scenario": "负面情绪态",
+      "persona": "P2",
+      "proposed_action": "fast/high/switch/frequent",
+      "triggered_rules": [
+        "R2"
+      ],
+      "trigger_dim": "pFear>0.30",
+      "replaced_with": "slow/low/maintain/moderate",
+      "intercepted": true
+    },
+    {
+      "scenario": "疲劳态",
+      "persona": "P1",
+      "proposed_action": "fast/high/switch/frequent",
+      "triggered_rules": [
+        "R4"
+      ],
+      "trigger_dim": "fatigue=0.70>0.50",
+      "replaced_with": "slow/low/maintain/moderate",
+      "intercepted": true
+    },
+    {
+      "scenario": "低置信态",
+      "persona": "P2",
+      "proposed_action": "fast/high/switch/frequent",
+      "triggered_rules": [
+        "R3"
+      ],
+      "trigger_dim": "confidence=0.20<0.40",
+      "replaced_with": "slow/low/maintain/moderate",
+      "intercepted": true
+    },
+    {
+      "scenario": "感知弃权",
+      "persona": "P2",
+      "proposed_action": "fast/high/switch/frequent",
+      "triggered_rules": [
+        "R3"
+      ],
+      "trigger_dim": "abstain=True",
+      "replaced_with": "slow/low/maintain/moderate",
+      "intercepted": true
+    }
+  ]
+}

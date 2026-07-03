@@ -1,0 +1,110 @@
+{
+  "P1": {
+    "single_step": {
+      "engagement_mae": 0.017477426677942276,
+      "engagement_rmse": 0.02238565683364868,
+      "confidence_mae": 0.04196252301335335,
+      "fatigue_mae": 0.024942653253674507,
+      "emotion_dist_mse": 0.00904808845371008,
+      "emotion_argmax_acc": 0.7633333333333333,
+      "self_stim_acc": 1.0,
+      "n_val": 300
+    },
+    "distribution": {
+      "engagement_state_JSD_log2": 0.0033,
+      "engagement_state_cosine": 0.9997,
+      "emotion_JSD_log2": 0.002,
+      "emotion_cosine": 0.998,
+      "real_eng_dist": [
+        0.0,
+        0.043,
+        0.957
+      ],
+      "sim_eng_dist": [
+        0.0,
+        0.02,
+        0.98
+      ]
+    },
+    "rollout": {
+      "rollout_eng_mae_mean": 0.0258,
+      "rollout_eng_mae_std": 0.0115,
+      "n_rollout_episodes": 10,
+      "diverged_or_collapsed": 0
+    },
+    "train_episodes": 40,
+    "val_episodes": 10
+  },
+  "P2": {
+    "single_step": {
+      "engagement_mae": 0.07480158656835556,
+      "engagement_rmse": 0.10261033475399017,
+      "confidence_mae": 0.04375006631016731,
+      "fatigue_mae": 0.016441231593489647,
+      "emotion_dist_mse": 0.011034184135496616,
+      "emotion_argmax_acc": 0.6966666666666667,
+      "self_stim_acc": 0.9633333333333334,
+      "n_val": 300
+    },
+    "distribution": {
+      "engagement_state_JSD_log2": 0.1468,
+      "engagement_state_cosine": 0.94,
+      "emotion_JSD_log2": 0.0467,
+      "emotion_cosine": 0.9924,
+      "real_eng_dist": [
+        0.13,
+        0.65,
+        0.22
+      ],
+      "sim_eng_dist": [
+        0.0,
+        0.97,
+        0.03
+      ]
+    },
+    "rollout": {
+      "rollout_eng_mae_mean": 0.0909,
+      "rollout_eng_mae_std": 0.0046,
+      "n_rollout_episodes": 10,
+      "diverged_or_collapsed": 0
+    },
+    "train_episodes": 40,
+    "val_episodes": 10
+  },
+  "P3": {
+    "single_step": {
+      "engagement_mae": 0.05757150799036026,
+      "engagement_rmse": 0.09726178646087646,
+      "confidence_mae": 0.04023952782154083,
+      "fatigue_mae": 0.10121853649616241,
+      "emotion_dist_mse": 0.011924675665795803,
+      "emotion_argmax_acc": 0.6566666666666666,
+      "self_stim_acc": 1.0,
+      "n_val": 300
+    },
+    "distribution": {
+      "engagement_state_JSD_log2": 0.0426,
+      "engagement_state_cosine": 0.9888,
+      "emotion_JSD_log2": 0.0038,
+      "emotion_cosine": 0.9936,
+      "real_eng_dist": [
+        0.907,
+        0.04,
+        0.053
+      ],
+      "sim_eng_dist": [
+        0.837,
+        0.157,
+        0.007
+      ]
+    },
+    "rollout": {
+      "rollout_eng_mae_mean": 0.0648,
+      "rollout_eng_mae_std": 0.0133,
+      "n_rollout_episodes": 10,
+      "diverged_or_collapsed": 0
+    },
+    "train_episodes": 40,
+    "val_episodes": 10
+  }
+}

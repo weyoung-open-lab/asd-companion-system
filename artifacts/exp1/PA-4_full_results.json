@@ -1,0 +1,128 @@
+{
+  "P1": {
+    "D1_JSD": 0.0023,
+    "D1_pass": true,
+    "D1_cosine": 0.9999,
+    "D2_wasserstein": 0.0127,
+    "D2_pass": true,
+    "sim_distribution": {
+      "0": 0.0,
+      "1": 0.0033,
+      "2": 0.9967
+    },
+    "real_distribution": {
+      "0": 0.0,
+      "1": 0.016,
+      "2": 0.984
+    },
+    "D3_temporal": {
+      "early": {
+        "real": 1.963,
+        "sim": 1.997,
+        "rel_error_pct": 1.7,
+        "pass": true
+      },
+      "mid": {
+        "real": 1.989,
+        "sim": 2.0,
+        "rel_error_pct": 0.6,
+        "pass": true
+      },
+      "late": {
+        "real": 2.0,
+        "sim": 1.993,
+        "rel_error_pct": 0.3,
+        "pass": true
+      }
+    },
+    "D3_pass": true,
+    "D4_pass": true,
+    "D5_pass": true,
+    "overall_pass": true,
+    "cohen_kappa": 0.71524500907441
+  },
+  "P2": {
+    "D1_JSD": 0.0045,
+    "D1_pass": true,
+    "D1_cosine": 0.9964,
+    "D2_wasserstein": 0.0866,
+    "D2_pass": true,
+    "sim_distribution": {
+      "0": 0.1456,
+      "1": 0.74,
+      "2": 0.1144
+    },
+    "real_distribution": {
+      "0": 0.0886,
+      "1": 0.7672,
+      "2": 0.1441
+    },
+    "D3_temporal": {
+      "early": {
+        "real": 1.202,
+        "sim": 1.023,
+        "rel_error_pct": 14.9,
+        "pass": true
+      },
+      "mid": {
+        "real": 0.946,
+        "sim": 1.09,
+        "rel_error_pct": 15.2,
+        "pass": true
+      },
+      "late": {
+        "real": 1.019,
+        "sim": 0.793,
+        "rel_error_pct": 22.1,
+        "pass": true
+      }
+    },
+    "D3_pass": true,
+    "D4_pass": true,
+    "D5_pass": true,
+    "overall_pass": true,
+    "cohen_kappa": 0.7317768838987513
+  },
+  "P3": {
+    "D1_JSD": 0.0293,
+    "D1_pass": true,
+    "D1_cosine": 0.9871,
+    "D2_wasserstein": 0.112,
+    "D2_pass": true,
+    "sim_distribution": {
+      "0": 0.7789,
+      "1": 0.2211,
+      "2": 0.0
+    },
+    "real_distribution": {
+      "0": 0.8359,
+      "1": 0.1091,
+      "2": 0.055
+    },
+    "D3_temporal": {
+      "early": {
+        "real": 0.399,
+        "sim": 0.4,
+        "rel_error_pct": 0.3,
+        "pass": true
+      },
+      "mid": {
+        "real": 0.147,
+        "sim": 0.163,
+        "rel_error_pct": 11.1,
+        "pass": true
+      },
+      "late": {
+        "real": 0.109,
+        "sim": 0.1,
+        "rel_error_pct": 8.3,
+        "pass": true
+      }
+    },
+    "D3_pass": true,
+    "D4_pass": true,
+    "D5_pass": true,
+    "overall_pass": true,
+    "cohen_kappa": 0.9566563467492263
+  }
+}

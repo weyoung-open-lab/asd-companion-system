@@ -1,0 +1,108 @@
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; max-width: 900px; margin: 0 auto; padding: 24px; color: var(--text-color, #1a1a2e);">
+
+  <h2 style="text-align:center; font-size:22px; margin-bottom:8px;">🧩 ASD 机器人仿真实验 · 执行路线图</h2>
+  <p style="text-align:center; font-size:13px; color: var(--muted-color, #888); margin-bottom:28px;">按顺序完成每个阶段，打勾 ✓ 表示前置条件</p>
+
+  <!-- Phase 0 -->
+  <div style="background: var(--card-bg, #f0f4ff); border-left: 4px solid #4361ee; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+      <span style="background:#4361ee; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:12px;">阶段 0</span>
+      <strong style="font-size:16px;">环境准备</strong>
+      <span style="margin-left:auto; font-size:12px; color:#888;">⏱ 1-2天</span>
+    </div>
+    <div style="font-size:13px; line-height:1.7;">
+      <div>☐ 注册 OpenAI 账号，充值 $5-10，获取 API Key</div>
+      <div>☐ 安装 Python 3.10 + Conda 环境</div>
+      <div>☐ 运行 <code>setup_project.sh</code> 创建项目目录</div>
+      <div>☐ <code>pip install -r requirements.txt</code></div>
+      <div>☐ 将 API Key 写入 <code>.env</code> 文件</div>
+    </div>
+  </div>
+
+  <!-- Phase 1 -->
+  <div style="text-align:center; font-size:18px; color:#aaa; margin: 4px 0;">↓</div>
+  <div style="background: var(--card-bg, #fff5f5); border-left: 4px solid #e63946; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+      <span style="background:#e63946; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:12px;">阶段 1</span>
+      <strong style="font-size:16px;">实验一 · LLM-ASD仿真器</strong>
+      <span style="margin-left:auto; font-size:12px; color: #e63946; font-weight:600;">⭐ 最优先</span>
+      <span style="font-size:12px; color:#888;">⏱ 第1-2周</span>
+    </div>
+    <div style="font-size:13px; line-height:1.7;">
+      <div><strong>第1步（已完成 ✓）</strong>：编写 System Prompt 四模块 + 仿真器代码</div>
+      <div><strong>第2步</strong>：运行 <code>exp1_simulator.py</code> 测试5轮交互，看输出是否合理</div>
+      <div><strong>第3步</strong>：下载 Engagnition 数据集，提取参与度转移概率矩阵</div>
+      <div><strong>第4步</strong>：运行100个episode × 3原型，提取LLM转移概率矩阵</div>
+      <div><strong>第5步</strong>：计算 KL 散度，迭代优化 Prompt 直到 KL < 0.15</div>
+      <div><strong>第6步</strong>：完成 Prompt 消融实验（PA-1 ~ PA-4）</div>
+    </div>
+    <div style="margin-top:10px; padding:8px 12px; background:rgba(230,57,70,0.08); border-radius:6px; font-size:12px;">
+      💡 <strong>关键产出</strong>：一个经过校准的、可被 Gymnasium 调用的 ASD 儿童仿真器
+    </div>
+  </div>
+
+  <!-- Phase 2 -->
+  <div style="text-align:center; font-size:18px; color:#aaa; margin: 4px 0;">↓ （可与阶段1并行）</div>
+  <div style="background: var(--card-bg, #f0fff4); border-left: 4px solid #2d6a4f; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+      <span style="background:#2d6a4f; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:12px;">阶段 2</span>
+      <strong style="font-size:16px;">实验二 · CM-TANet 情感感知</strong>
+      <span style="margin-left:auto; font-size:12px; color:#888;">⏱ 第3-4周</span>
+    </div>
+    <div style="font-size:13px; line-height:1.7;">
+      <div><strong>第1步</strong>：下载 FER-Autism 数据集（Mendeley免费）+ 申请 AffectNet</div>
+      <div><strong>第2步</strong>：搭建数据预处理流水线（人脸检测 → 对齐 → 归一化）</div>
+      <div><strong>第3步</strong>：先跑通 ResNet-50 基线（B1），确认流程正确</div>
+      <div><strong>第4步</strong>：实现 CM-TANet 完整架构（视觉编码器 + AU编码器 + 交叉注意力 + GRU）</div>
+      <div><strong>第5步</strong>：训练 + 消融实验（Abl-1 ~ Abl-4）</div>
+      <div><strong>第6步</strong>：在 ASD-FER 数据集上做零样本迁移测试</div>
+    </div>
+    <div style="margin-top:10px; padding:8px 12px; background:rgba(45,106,79,0.08); border-radius:6px; font-size:12px;">
+      💡 <strong>关键产出</strong>：Macro F1 ≥ 0.82 的 ASD 专属情感分类器
+    </div>
+  </div>
+
+  <!-- Phase 3 -->
+  <div style="text-align:center; font-size:18px; color:#aaa; margin: 4px 0;">↓ （依赖阶段1完成）</div>
+  <div style="background: var(--card-bg, #fff8f0); border-left: 4px solid #e76f51; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+      <span style="background:#e76f51; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:12px;">阶段 3</span>
+      <strong style="font-size:16px;">实验三 · SAC 策略优化</strong>
+      <span style="margin-left:auto; font-size:12px; color:#888;">⏱ 第5-6周</span>
+    </div>
+    <div style="font-size:13px; line-height:1.7;">
+      <div><strong>第1步</strong>：将仿真器包装成 Gymnasium 环境（定义 observation/action space）</div>
+      <div><strong>第2步</strong>：实现 Random + Rule-Based 基线，验证环境接口</div>
+      <div><strong>第3步</strong>：训练 DQN 和 PPO（用 Stable-Baselines3，几行代码搞定）</div>
+      <div><strong>第4步</strong>：训练 Discrete SAC（3原型 × 3种子）</div>
+      <div><strong>第5步</strong>：Wilcoxon 显著性检验 + 生成学习曲线图</div>
+    </div>
+    <div style="margin-top:10px; padding:8px 12px; background:rgba(231,111,81,0.08); border-radius:6px; font-size:12px;">
+      💡 <strong>关键产出</strong>：SAC 累积参与度 ≥ 48/60，过激率 < 5%
+    </div>
+  </div>
+
+  <!-- Phase 4 -->
+  <div style="text-align:center; font-size:18px; color:#aaa; margin: 4px 0;">↓</div>
+  <div style="background: var(--card-bg, #f5f0ff); border-left: 4px solid #7209b7; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+      <span style="background:#7209b7; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:12px;">阶段 4</span>
+      <strong style="font-size:16px;">论文撰写与投稿</strong>
+      <span style="margin-left:auto; font-size:12px; color:#888;">⏱ 第7-8周</span>
+    </div>
+    <div style="font-size:13px; line-height:1.7;">
+      <div>☐ 绘制 6 张论文图表（系统架构、分布对比、混淆矩阵、学习曲线等）</div>
+      <div>☐ 撰写 Methodology + Experiments + Discussion</div>
+      <div>☐ IEEE LaTeX 模板排版，投稿 IEEE OJ-CS</div>
+    </div>
+  </div>
+
+  <!-- Bottom note -->
+  <div style="margin-top: 20px; padding: 14px 18px; background: var(--card-bg, #fffbe6); border: 1px solid #ffe066; border-radius: 8px; font-size: 13px; line-height: 1.6;">
+    <strong>🎯 你现在的第一步：</strong><br>
+    1. 注册 OpenAI API 并充值<br>
+    2. 配置 Python 环境<br>
+    3. 运行 <code>exp1_simulator.py</code>，观察5轮交互的输出<br>
+    <span style="color:#888;">成本约 $0.01 · 用时约 10 分钟 · 这一步成功就证明整个项目的地基是稳的</span>
+  </div>
+</div>

@@ -1,0 +1,173 @@
+{
+  "n_total": 770,
+  "classes": [
+    "Natural",
+    "anger",
+    "fear",
+    "joy"
+  ],
+  "cv": "5-fold (OOF fold column); calib+thresholds fit on train folds only",
+  "calibration": {
+    "ece_max_prob": {
+      "raw_T1": 0.2906,
+      "global_T": 0.0386,
+      "per_class_T": 0.0683
+    },
+    "classwise_ece": {
+      "raw_T1": 0.1613,
+      "global_T": 0.065,
+      "per_class_T": 0.0509
+    },
+    "per_class_ece_per_class_T": {
+      "Natural": 0.0751,
+      "anger": 0.0462,
+      "fear": 0.0364,
+      "joy": 0.0458
+    },
+    "deploy_global_T": 0.3833,
+    "deploy_per_class_T": {
+      "Natural": 0.575,
+      "anger": 0.6319,
+      "fear": 1.2811,
+      "joy": 0.1814
+    }
+  },
+  "three_level_gating": {
+    "target_accept_precision": 0.9,
+    "target_cautious_precision": 0.7,
+    "overall": {
+      "accept": {
+        "n": 465,
+        "coverage": 0.6039,
+        "precision": 0.9419
+      },
+      "cautious": {
+        "n": 150,
+        "coverage": 0.1948,
+        "precision": 0.68
+      },
+      "abstain": {
+        "n": 155,
+        "coverage": 0.2013,
+        "precision": 0.4387
+      },
+      "accept+cautious_kept": {
+        "n": 615,
+        "coverage": 0.7987,
+        "precision": 0.878
+      }
+    },
+    "per_class": {
+      "Natural": {
+        "predicted_n": 196,
+        "accept_threshold(CV mean)": 0.961,
+        "cautious_threshold(CV mean)": 0.672,
+        "accept": {
+          "n": 18,
+          "coverage": 0.0234,
+          "precision": 0.7778
+        },
+        "cautious": {
+          "n": 105,
+          "coverage": 0.1364,
+          "precision": 0.6857
+        },
+        "abstain": {
+          "n": 73,
+          "coverage": 0.0948,
+          "precision": 0.5479
+        }
+      },
+      "anger": {
+        "predicted_n": 80,
+        "accept_threshold(CV mean)": 0.904,
+        "cautious_threshold(CV mean)": 0.544,
+        "accept": {
+          "n": 21,
+          "coverage": 0.0273,
+          "precision": 0.6667
+        },
+        "cautious": {
+          "n": 40,
+          "coverage": 0.0519,
+          "precision": 0.7
+        },
+        "abstain": {
+          "n": 19,
+          "coverage": 0.0247,
+          "precision": 0.4737
+        }
+      },
+      "fear": {
+        "predicted_n": 69,
+        "accept_threshold(CV mean)": 0.93,
+        "cautious_threshold(CV mean)": 0.865,
+        "accept": {
+          "n": 2,
+          "coverage": 0.0026,
+          "precision": 1.0
+        },
+        "cautious": {
+          "n": 5,
+          "coverage": 0.0065,
+          "precision": 0.4
+        },
+        "abstain": {
+          "n": 62,
+          "coverage": 0.0805,
+          "precision": 0.3065
+        }
+      },
+      "joy": {
+        "predicted_n": 425,
+        "accept_threshold(CV mean)": 0.336,
+        "cautious_threshold(CV mean)": 0.336,
+        "accept": {
+          "n": 424,
+          "coverage": 0.5506,
+          "precision": 0.9623
+        },
+        "cautious": {
+          "n": 0,
+          "coverage": 0.0,
+          "precision": null
+        },
+        "abstain": {
+          "n": 1,
+          "coverage": 0.0013,
+          "precision": 0.0
+        }
+      }
+    },
+    "deploy_thresholds": {
+      "Natural": {
+        "accept": 0.956,
+        "cautious": 0.668
+      },
+      "anger": {
+        "accept": 0.904,
+        "cautious": 0.547
+      },
+      "fear": {
+        "accept": 0.923,
+        "cautious": 0.88
+      },
+      "joy": {
+        "accept": 0.329,
+        "cautious": 0.329
+      }
+    }
+  },
+  "old_global_thresholds_binary": {
+    "0.86": {
+      "coverage": 0.4818,
+      "precision_on_kept": 0.9326,
+      "n_kept": 371
+    },
+    "0.73": {
+      "coverage": 0.6584,
+      "precision_on_kept": 0.8994,
+      "n_kept": 507
+    }
+  }
+}
